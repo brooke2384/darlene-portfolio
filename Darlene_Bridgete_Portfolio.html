@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Darlene Bridgete, Administrative and Healthcare Office Professional. Medical office administration, patient services, front desk coordination, and clinical documentation.">
+<title>Darlene Bridgete | Administrative and Healthcare Office Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+:root{
+  --bg:#F5F3EF; --bg2:#EDE9E2; --bg3:#E4DFD6;
+  --surface:#FFFFFF;
+  --navy:#12243A; --navy2:#1C3653;
+  --teal:#0E6B58; --teal2:#0A5444;
+  --teal-lt:#E6F2EF; --teal-bd:#A3C9C2;
+  --gold:#9B6F2F; --gold-lt:#F5ECD8; --gold-bd:#C9A46A;
+  --body:#3A3530; --muted:#7A7268;
+  --border:#D8D2C8; --border2:#C8C1B5;
+  --nav-h:64px; --r:4px;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--body);line-height:1.65;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--teal);z-index:300;transform-origin:left;transform:scaleX(0);transition:transform .08s linear}
+
+nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:200;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(245,243,239,.96);border-bottom:1px solid transparent;transition:border-color .35s,box-shadow .35s;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+nav.sc{border-bottom-color:var(--border);box-shadow:0 1px 16px rgba(0,0,0,.06)}
+.nlogo{font-family:'Lora',serif;font-size:1.05rem;font-weight:600;color:var(--navy);letter-spacing:.01em}
+.nlogo span{color:var(--teal)}
+.nlinks{display:flex;gap:32px;list-style:none}
+.nlinks a{font-size:.74rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nlinks a:hover{color:var(--navy)}
+.ncta{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--teal);color:#fff;padding:9px 22px;border-radius:var(--r);transition:background .2s,transform .15s}
+.ncta:hover{background:var(--teal2);transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:100svh;padding:0 5%;display:grid;grid-template-rows:1fr auto;position:relative;border-bottom:1px solid var(--border)}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.22;pointer-events:none}
+.hm{display:flex;flex-direction:column;justify-content:flex-end;padding-top:calc(var(--nav-h) + 80px);padding-bottom:64px;max-width:840px;position:relative;z-index:1}
+
+.hey{display:flex;align-items:center;gap:12px;margin-bottom:28px;opacity:0;animation:fu .7s .1s ease forwards}
+.heyl{width:28px;height:2px;background:var(--teal);border-radius:1px}
+.heyt{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+
+.hname{font-family:'Lora',serif;font-size:clamp(3rem,6.5vw,5.8rem);font-weight:700;color:var(--navy);line-height:1;letter-spacing:-.02em;margin-bottom:8px;opacity:0;animation:fu .85s .22s ease forwards}
+.hname em{font-weight:400;font-style:italic;color:var(--teal)}
+
+.hsubt{font-size:1.05rem;font-weight:400;color:var(--muted);letter-spacing:.01em;margin-bottom:32px;opacity:0;animation:fu .85s .34s ease forwards}
+
+.htag{font-size:1.08rem;font-weight:300;color:var(--body);line-height:1.8;max-width:640px;margin-bottom:44px;opacity:0;animation:fu .85s .46s ease forwards}
+.htag strong{color:var(--navy);font-weight:600}
+
+.hact{display:flex;align-items:center;gap:18px;flex-wrap:wrap;opacity:0;animation:fu .85s .58s ease forwards}
+.btn-main{display:inline-block;background:var(--teal);color:#fff;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:13px 28px;border-radius:var(--r);transition:background .2s,transform .15s}
+.btn-main:hover{background:var(--teal2);transform:translateY(-2px)}
+.btn-sec{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border2);padding:12px 22px;border-radius:var(--r);transition:all .2s}
+.btn-sec:hover{color:var(--navy);border-color:var(--navy)}
+
+/* role pills */
+.hroles{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;opacity:0;animation:fu .85s .38s ease forwards}
+.hrole{font-size:.72rem;font-weight:500;letter-spacing:.06em;color:var(--teal2);background:var(--teal-lt);border:1px solid var(--teal-bd);padding:5px 12px;border-radius:20px}
+
+.hstats{border-top:1px solid var(--border);padding:28px 0;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:1;opacity:0;animation:fu .85s .7s ease forwards}
+.hstat{padding:0 28px 0 0;border-right:1px solid var(--border)}
+.hstat:first-child{padding-left:0}
+.hstat:last-child{border-right:none}
+.hnum{font-family:'Lora',serif;font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:6px}
+.hnum s2{color:var(--teal);font-style:normal}
+.hlbl{font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* MARQUEE */
+.mwrap{background:var(--navy);overflow:hidden;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.mtrack{display:flex;width:max-content;animation:mq 42s linear infinite}
+.mtrack:hover{animation-play-state:paused}
+.mitem{display:flex;align-items:center;gap:16px;padding:0 24px;font-size:.67rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);white-space:nowrap}
+.mdot{width:3px;height:3px;border-radius:50%;background:var(--teal-bd);flex-shrink:0;opacity:.7}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* WHY HIRE STRIP */
+.why-strip{background:var(--surface);border-bottom:1px solid var(--border);padding:44px 5%;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.why-item{padding:0 40px 0 0;border-right:1px solid var(--border)}
+.why-item:first-child{padding-left:0}
+.why-item:last-child{border-right:none;padding-right:0;padding-left:40px}
+.why-cat{font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.why-val{font-family:'Lora',serif;font-size:1.05rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:8px}
+.why-desc{font-size:.82rem;font-weight:300;color:var(--muted);line-height:1.65}
+
+/* SECTIONS */
+.sec{padding:88px 5%}
+.sec-alt{background:var(--bg2)}
+.sec-white{background:var(--surface)}
+.sec-label{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.sec-ll{width:24px;height:2px;background:var(--teal);border-radius:1px;flex-shrink:0}
+.sec-lt{font-size:.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--teal)}
+.sec-h2{font-family:'Lora',serif;font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.12;letter-spacing:-.01em;margin-bottom:8px}
+.sec-h2 em{font-style:italic;font-weight:400;color:var(--teal)}
+.sec-sub{font-size:.92rem;font-weight:300;color:var(--muted);max-width:520px;line-height:1.7}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;padding:88px 5%;background:var(--surface)}
+.about-body p{font-size:.94rem;font-weight:300;color:var(--muted);line-height:1.88;margin-bottom:18px}
+.about-body p strong{color:var(--body);font-weight:500}
+.about-body p:last-of-type{margin-bottom:0}
+
+/* phipa callout */
+.phipa-box{margin-top:28px;border:1px solid var(--teal-bd);border-left:3px solid var(--teal);background:var(--teal-lt);padding:16px 18px;border-radius:var(--r)}
+.phipa-title{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal2);margin-bottom:5px}
+.phipa-text{font-size:.84rem;font-weight:400;color:var(--teal2);line-height:1.58}
+
+/* expertise list */
+.elist{display:flex;flex-direction:column;padding-top:12px}
+.eitem{display:flex;align-items:flex-start;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);opacity:0;transform:translateX(14px);transition:opacity .5s,transform .5s}
+.eitem.vis{opacity:1;transform:translateX(0)}
+.eitem:last-child{border-bottom:none}
+.enum{font-family:'DM Mono',monospace;font-size:.62rem;color:var(--gold);margin-top:2px;flex-shrink:0;letter-spacing:.04em;width:22px}
+.ec h4{font-size:.86rem;font-weight:600;color:var(--navy);margin-bottom:4px}
+.ec p{font-size:.8rem;color:var(--muted);line-height:1.6;font-weight:300}
+
+/* WHAT I BRING section for these roles */
+.roles-sec{padding:88px 5%;background:var(--bg2)}
+.roles-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:52px}
+.role-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:24px 18px;position:relative;overflow:hidden;opacity:0;transform:translateY(14px);transition:opacity .45s,transform .45s,border-color .2s,box-shadow .2s}
+.role-card.vis{opacity:1;transform:translateY(0)}
+.role-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.role-card:hover::before{transform:scaleX(1)}
+.role-card:hover{border-color:var(--teal-bd);box-shadow:0 4px 20px rgba(14,107,88,.08)}
+.role-name{font-size:.8rem;font-weight:700;color:var(--navy);margin-bottom:12px;line-height:1.3}
+.role-list{display:flex;flex-direction:column;gap:5px}
+.role-item{font-size:.74rem;color:var(--muted);font-weight:300;display:flex;align-items:flex-start;gap:7px;line-height:1.5}
+.role-dot{width:4px;height:4px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:5px}
+.role-item.ft{color:var(--body);font-weight:500}
+.role-item.ft .role-dot{background:var(--teal)}
+
+/* WORK */
+.wsec{padding:88px 5% 72px}
+.wsec-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:52px;padding-bottom:28px;border-bottom:1px solid var(--border)}
+.pgrid{display:flex;flex-direction:column}
+.pc{display:grid;grid-template-columns:240px 1fr 240px;gap:44px;padding:44px 0;border-bottom:1px solid var(--border);position:relative;opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.pc::before{content:'';position:absolute;left:-5%;right:-5%;top:0;bottom:0;background:var(--surface);opacity:0;transition:opacity .25s;z-index:0}
+.pc:hover::before{opacity:1}
+.pc > *{position:relative;z-index:1}
+.pc.vis{opacity:1;transform:translateY(0)}
+.pnum{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);letter-spacing:.1em;margin-bottom:14px}
+.ptitle{font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:12px}
+.ptags{display:flex;flex-wrap:wrap;gap:6px}
+.ptag{font-size:.62rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border2);background:var(--surface);padding:3px 9px;border-radius:2px}
+.pdesc{font-size:.87rem;font-weight:300;color:var(--muted);line-height:1.8;margin-bottom:18px}
+.pdesc strong{color:var(--body);font-weight:500}
+.padmin-lens{background:var(--gold-lt);border:1px solid var(--gold-bd);border-left:3px solid var(--gold);padding:12px 14px;border-radius:var(--r);margin-bottom:14px}
+.padmin-lens-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.padmin-lens-text{font-size:.8rem;color:var(--body);line-height:1.55;font-weight:400}
+.pdel{font-size:.76rem;color:var(--muted);line-height:1.6;padding:10px 14px;border:1px solid var(--border);border-left:3px solid var(--teal-bd);background:var(--bg);border-radius:var(--r);font-style:italic}
+.pouts{display:flex;flex-direction:column;gap:8px}
+.pout{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1px solid var(--border);border-radius:var(--r);background:var(--surface)}
+.poi{width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:5px}
+.poi.gold{background:var(--gold)}
+.poi.blue{background:#2D6AB5}
+.pot{font-size:.77rem;color:var(--body);line-height:1.5;font-weight:400}
+.potl{display:block;font-size:.61rem;color:var(--muted);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+.ptools{margin-top:14px;display:flex;flex-wrap:wrap;gap:5px}
+.tool{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--muted);background:var(--bg2);border:1px solid var(--border);padding:3px 9px;border-radius:3px;letter-spacing:.03em}
+
+/* SKILLS */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:52px;border-radius:var(--r);overflow:hidden}
+.sc{background:var(--surface);padding:28px 24px;opacity:0;transform:scale(.98);transition:opacity .4s,transform .4s,background .2s}
+.sc.vis{opacity:1;transform:scale(1)}
+.sc:hover{background:var(--bg)}
+.sci{font-family:'DM Mono',monospace;font-size:.57rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.sc h4{font-size:.8rem;font-weight:600;color:var(--navy);margin-bottom:12px}
+.slist{display:flex;flex-direction:column;gap:5px}
+.se{display:flex;align-items:center;gap:8px;font-size:.77rem;color:var(--muted);font-weight:300}
+.sd{width:4px;height:4px;border-radius:50%;background:var(--border2);flex-shrink:0}
+.se.ft .sd{background:var(--teal)}
+.se.ft{color:var(--body);font-weight:400}
+
+/* CERTS */
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px}
+.cc{border:1px solid var(--border);padding:24px 20px;border-radius:var(--r);background:var(--surface);position:relative;overflow:hidden;opacity:0;transform:translateY(12px);transition:opacity .45s,transform .45s,border-color .2s,box-shadow .2s}
+.cc.vis{opacity:1;transform:translateY(0)}
+.cc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.cc:hover::before{transform:scaleX(1)}
+.cc:hover{border-color:var(--teal-bd);box-shadow:0 4px 20px rgba(14,107,88,.08)}
+.cy{font-family:'DM Mono',monospace;font-size:.59rem;color:var(--muted);letter-spacing:.08em;margin-bottom:10px}
+.ct2{font-size:.84rem;font-weight:600;color:var(--navy);line-height:1.35;margin-bottom:5px}
+.ciss{font-size:.74rem;color:var(--muted);font-weight:300}
+.cid{font-family:'DM Mono',monospace;font-size:.57rem;color:var(--border2);margin-top:9px;letter-spacing:.03em}
+
+/* CONTACT */
+.ctsec{padding:88px 5% 80px;background:var(--navy)}
+.ctinner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.cth{font-family:'Lora',serif;font-size:clamp(2rem,3.8vw,3.4rem);font-weight:700;color:#fff;line-height:1.1;letter-spacing:-.015em;margin-bottom:18px}
+.cth em{font-style:italic;font-weight:400;color:var(--teal-bd)}
+.ctsub{font-size:.92rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.82}
+.ctsub strong{color:rgba(255,255,255,.85);font-weight:500}
+.open-note{display:block;margin-top:20px;font-size:.8rem;font-weight:500;color:var(--teal-bd);letter-spacing:.03em;line-height:1.6}
+.ctlinks{padding-top:8px;display:flex;flex-direction:column}
+.ctl{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.08);transition:border-color .2s}
+.ctl:first-child{border-top:1px solid rgba(255,255,255,.08)}
+.ctl:hover{border-bottom-color:rgba(14,107,88,.5)}
+.ctlt{font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:3px}
+.ctlv{font-size:.88rem;font-weight:400;color:rgba(255,255,255,.8);transition:color .2s}
+.ctl:hover .ctlv{color:#fff}
+.ctarr{color:rgba(255,255,255,.2);font-size:1rem;transition:color .2s,transform .2s}
+.ctl:hover .ctarr{color:var(--teal-bd);transform:translate(3px,-3px)}
+
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:22px 5%;display:flex;justify-content:space-between;align-items:center}
+.fn{font-family:'Lora',serif;font-size:.88rem;color:rgba(255,255,255,.35)}
+.fc{font-size:.63rem;color:rgba(255,255,255,.2);letter-spacing:.08em;font-family:'DM Mono',monospace}
+
+.rev{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.23,1,.32,1),transform .65s cubic-bezier(.23,1,.32,1)}
+.rev.vis{opacity:1;transform:translateY(0)}
+
+@media(max-width:960px){
+  .about-grid,.ctinner{grid-template-columns:1fr;gap:48px}
+  .pc{grid-template-columns:1fr;gap:24px}
+  .sgrid{grid-template-columns:1fr 1fr}
+  .cgrid{grid-template-columns:1fr 1fr}
+  .roles-grid{grid-template-columns:1fr 1fr}
+  .hstats{grid-template-columns:1fr 1fr;gap:0}
+  .hstat{border-bottom:1px solid var(--border);padding:16px 0;border-right:none}
+  .hstat:nth-child(odd){border-right:1px solid var(--border)}
+  .wsec-hd{flex-direction:column;align-items:flex-start}
+  .why-strip{grid-template-columns:1fr;gap:28px}
+  .why-item{padding:0 0 28px;border-right:none;border-bottom:1px solid var(--border)}
+  .why-item:last-child{border-bottom:none;padding-left:0;padding-bottom:0}
+  .nlinks{display:none}
+}
+@media(max-width:600px){
+  .sgrid{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr}
+  .roles-grid{grid-template-columns:1fr}
+  .hnum{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<nav id="nb">
+  <a href="#" class="nlogo">Darlene <span>B.</span></a>
+  <ul class="nlinks">
+    <li><a href="#what-i-bring">What I Bring</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:amariayrin@gmail.com" class="ncta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hm">
+    <div class="hey">
+      <div class="heyl"></div>
+      <span class="heyt">Administrative and Healthcare Office Professional</span>
+    </div>
+    <h1 class="hname">
+      Darlene <em>Ayrin</em> Bridgete
+    </h1>
+    <p class="hsubt">Medical Office Administration · Patient Services · Front Desk Coordination</p>
+    <div class="hroles">
+      <span class="hrole">Administrative Assistant</span>
+      <span class="hrole">Medical Office Assistant</span>
+      <span class="hrole">Clinic Clerk</span>
+      <span class="hrole">Patient Services Clerk</span>
+      <span class="hrole">Receptionist / Front Desk</span>
+    </div>
+    <p class="htag">
+      An office runs on two things: the person at the front who never rattles,
+      and the documentation behind them that is always right.
+      I am <strong>reliable, PHIPA-aware, and ready from the first day</strong>
+      with the administrative systems, healthcare knowledge, and professional communication
+      your team needs to run without interruption.
+    </p>
+    <div class="hact">
+      <a href="mailto:amariayrin@gmail.com" class="btn-main">Start a Conversation</a>
+      <a href="#what-i-bring" class="btn-sec">
+        What I Bring
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="hstats">
+    <div class="hstat">
+      <div class="hnum"><span class="cnt" data-t="3">0</span><s2>+</s2></div>
+      <div class="hlbl">Years Office Experience</div>
+    </div>
+    <div class="hstat">
+      <div class="hnum"><span class="cnt" data-t="5">0</span><s2>+</s2></div>
+      <div class="hlbl">Clients Managed at Once</div>
+    </div>
+    <div class="hnum-stat hstat">
+      <div class="hnum"><span class="cnt" data-t="100">0</span><s2>%</s2></div>
+      <div class="hlbl">On-Time Record</div>
+    </div>
+    <div class="hstat">
+      <div class="hnum"><span class="cnt" data-t="100">0</span><s2>%</s2></div>
+      <div class="hlbl">Client Retention Rate</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mwrap">
+  <div class="mtrack">
+    <div class="mitem"><span>PHIPA-Aware</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Medical Office Administration</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Patient Records Management</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Appointment Scheduling</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Clinical Documentation</span><div class="mdot"></div></div>
+    <div class="mitem"><span>CISSP Certified</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Google PM Certified</span><div class="mdot"></div></div>
+    <div class="mitem"><span>EMR and EHR Workflow</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Microsoft 365 Proficient</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Correspondence Management</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Confidential Data Handling</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Professional Communication</span><div class="mdot"></div></div>
+    <div class="mitem"><span>PHIPA-Aware</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Medical Office Administration</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Patient Records Management</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Appointment Scheduling</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Clinical Documentation</span><div class="mdot"></div></div>
+    <div class="mitem"><span>CISSP Certified</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Google PM Certified</span><div class="mdot"></div></div>
+    <div class="mitem"><span>EMR and EHR Workflow</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Microsoft 365 Proficient</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Correspondence Management</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Confidential Data Handling</span><div class="mdot"></div></div>
+    <div class="mitem"><span>Professional Communication</span><div class="mdot"></div></div>
+  </div>
+</div>
+
+<!-- WHY HIRE STRIP -->
+<div class="why-strip">
+  <div class="why-item">
+    <div class="why-cat">Healthcare Compliance Ready</div>
+    <div class="why-val">PHIPA-Aware and EMR/EHR Familiar</div>
+    <div class="why-desc">Studied and applied PHIPA standards through a healthcare workflow digitization project. Understands patient data privacy, consent protocols, and clinical record requirements from day one.</div>
+  </div>
+  <div class="why-item">
+    <div class="why-cat">Proven Administrative Track Record</div>
+    <div class="why-val">3+ Years, Zero Missed Deadlines</div>
+    <div class="why-desc">Managed scheduling, correspondence, documentation, and multi-client coordination across 3+ years of paid practice. Every engagement documented, every deadline met, every client retained.</div>
+  </div>
+  <div class="why-item">
+    <div class="why-cat">Technology-Comfortable</div>
+    <div class="why-val">Any Software, Fast</div>
+    <div class="why-desc">Proficient in Microsoft 365, Google Workspace, and a range of scheduling and records tools. Picks up new systems quickly and documents processes so teams do not depend on one person to remember how things work.</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-grid" id="about">
+  <div>
+    <div class="sec-label rev"><div class="sec-ll"></div><span class="sec-lt">About</span></div>
+    <h2 class="sec-h2 rev">Organised, <em>calm, and ready.</em></h2>
+    <div class="about-body" style="margin-top:24px">
+      <p class="rev">Administrative work is the backbone of every office that functions properly. For three years, I have been the person responsible for keeping operations accurate, patients attended to, correspondence answered, and records correct. I do not create noise, I do not let things fall through gaps, and I document everything so the next person can pick up exactly where I left off.</p>
+      <p class="rev">My background in healthcare workflow administration means I arrive with <strong>genuine understanding of how clinical offices run</strong>, what PHIPA requires, and how to handle patient information with the discretion and accuracy every healthcare environment demands. I also hold a CISSP security certification and Google Project Management Certificate, which means I bring a level of data awareness and organisational discipline that most front desk candidates do not have.</p>
+      <p class="rev">I am professional with patients and clients, precise with documentation, and reliable in ways that can be verified by the people I have worked with.</p>
+    </div>
+    <div class="phipa-box rev">
+      <div class="phipa-title">PHIPA Compliance Awareness</div>
+      <div class="phipa-text">Applied PHIPA standards through a structured healthcare workflow project covering patient data privacy, consent management, EMR/EHR adoption, and audit-ready recordkeeping. Directly applicable to medical office, clinic, and patient services roles across Canada.</div>
+    </div>
+  </div>
+  <div>
+    <div class="elist">
+      <div class="eitem">
+        <div class="enum">01</div>
+        <div class="ec">
+          <h4>Patient and Client Communication</h4>
+          <p>Professional, calm, and consistent in all client-facing interactions. Experienced managing correspondence, appointment scheduling, follow-ups, and multi-line communication across simultaneous engagements.</p>
+        </div>
+      </div>
+      <div class="eitem">
+        <div class="enum">02</div>
+        <div class="ec">
+          <h4>Medical Office and Records Management</h4>
+          <p>Familiar with clinical documentation standards, patient record handling, and the privacy requirements governing health information in Canada. Precise, confidential, and audit-aware in all record management tasks.</p>
+        </div>
+      </div>
+      <div class="eitem">
+        <div class="enum">03</div>
+        <div class="ec">
+          <h4>Office Administration and Coordination</h4>
+          <p>Scheduling, filing, data entry, inbox management, meeting coordination, and documentation. Built administrative systems from zero for multiple clients and kept them running reliably without ongoing supervision.</p>
+        </div>
+      </div>
+      <div class="eitem">
+        <div class="enum">04</div>
+        <div class="ec">
+          <h4>Technology and Software Proficiency</h4>
+          <p>Microsoft 365, Google Workspace, Notion, Jira, and a range of scheduling and records tools. Learns new software quickly and produces clear documentation so teams are not dependent on institutional memory.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT I BRING FOR EACH ROLE -->
+<section class="roles-sec" id="what-i-bring">
+  <div style="margin-bottom:0">
+    <div class="sec-label rev"><div class="sec-ll"></div><span class="sec-lt">Role Fit</span></div>
+    <h2 class="sec-h2 rev">What I bring to <em>each role</em></h2>
+    <p class="sec-sub rev" style="margin-top:10px">Specific qualifications and capabilities for each position I am applying for.</p>
+  </div>
+  <div class="roles-grid">
+
+    <div class="role-card">
+      <div class="role-name">Administrative Assistant</div>
+      <div class="role-list">
+        <div class="role-item ft"><div class="role-dot"></div>3+ years managing calendars, correspondence, and filing</div>
+        <div class="role-item ft"><div class="role-dot"></div>Multi-project coordination without supervision</div>
+        <div class="role-item ft"><div class="role-dot"></div>Google PM Certificate for structured coordination</div>
+        <div class="role-item"><div class="role-dot"></div>Microsoft 365 and Google Workspace daily use</div>
+        <div class="role-item"><div class="role-dot"></div>Professional written and verbal communication</div>
+        <div class="role-item"><div class="role-dot"></div>Documentation that does not need constant updating</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-name">Office Administrative Assistant</div>
+      <div class="role-list">
+        <div class="role-item ft"><div class="role-dot"></div>Built complete office admin systems from zero</div>
+        <div class="role-item ft"><div class="role-dot"></div>SOPs and filing systems permanently adopted by clients</div>
+        <div class="role-item ft"><div class="role-dot"></div>Data entry accuracy across 3+ years with no recorded errors</div>
+        <div class="role-item"><div class="role-dot"></div>Scheduling, invoicing, and records management</div>
+        <div class="role-item"><div class="role-dot"></div>Version-controlled document management</div>
+        <div class="role-item"><div class="role-dot"></div>Onboarding new tools for teams quickly</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-name">Medical Office Assistant</div>
+      <div class="role-list">
+        <div class="role-item ft"><div class="role-dot"></div>PHIPA compliance knowledge applied in real project work</div>
+        <div class="role-item ft"><div class="role-dot"></div>EMR/EHR workflow familiarity and readiness assessment</div>
+        <div class="role-item ft"><div class="role-dot"></div>CISSP certification: security-aware data handling</div>
+        <div class="role-item"><div class="role-dot"></div>Patient record documentation and consent management</div>
+        <div class="role-item"><div class="role-dot"></div>Clinical workflow digitization project experience</div>
+        <div class="role-item"><div class="role-dot"></div>Confidential information handled without exception</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-name">Clinic Clerk / Patient Services Clerk</div>
+      <div class="role-list">
+        <div class="role-item ft"><div class="role-dot"></div>Patient privacy and PHIPA requirements understood</div>
+        <div class="role-item ft"><div class="role-dot"></div>Appointment booking and schedule management experience</div>
+        <div class="role-item ft"><div class="role-dot"></div>Calm, professional in fast-paced, high-volume settings</div>
+        <div class="role-item"><div class="role-dot"></div>Registration, intake, and patient record handling</div>
+        <div class="role-item"><div class="role-dot"></div>Data entry accuracy for patient-sensitive information</div>
+        <div class="role-item"><div class="role-dot"></div>Audit-ready recordkeeping habits built in</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-name">Receptionist / Front Desk</div>
+      <div class="role-list">
+        <div class="role-item ft"><div class="role-dot"></div>Professional first impression, consistent and warm</div>
+        <div class="role-item ft"><div class="role-dot"></div>Multi-line communication and scheduling management</div>
+        <div class="role-item ft"><div class="role-dot"></div>Calm under simultaneous demands, zero things dropped</div>
+        <div class="role-item"><div class="role-dot"></div>Visitor coordination and intake management</div>
+        <div class="role-item"><div class="role-dot"></div>Quick to learn any booking or front desk system</div>
+        <div class="role-item"><div class="role-dot"></div>Correspondence, follow-up, and message handling</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="wsec sec-white" id="work">
+  <div class="wsec-hd">
+    <div>
+      <div class="sec-label rev"><div class="sec-ll"></div><span class="sec-lt">Selected Work</span></div>
+      <h2 class="sec-h2 rev">Projects and <em>Engagements</em></h2>
+    </div>
+  </div>
+  <div class="pgrid">
+
+    <div class="pc">
+      <div>
+        <div class="pnum">01 / PROJECT</div>
+        <h3 class="ptitle">Healthcare Workflow Digitization and PHIPA Compliance Review</h3>
+        <div class="ptags">
+          <span class="ptag">Healthcare</span>
+          <span class="ptag">PHIPA</span>
+          <span class="ptag">EMR / EHR</span>
+          <span class="ptag">Clinical Records</span>
+        </div>
+      </div>
+      <div>
+        <div class="padmin-lens">
+          <div class="padmin-lens-label">What this means for your office</div>
+          <div class="padmin-lens-text">I understand exactly how patient data moves through a clinical environment, what PHIPA requires at each step, and how to document it in a way that holds up to audit. I will not need training on why patient privacy matters or how records must be handled.</div>
+        </div>
+        <p class="pdesc">Conducted a full audit of a healthcare organisation's patient data workflows. Assessed EMR/EHR adoption readiness, mapped all data handling processes end-to-end, and documented compliance gaps against <strong>PHIPA standards</strong>. Produced a phased digitization roadmap and clear staff guidance for the clinical team.</p>
+        <div class="pdel">Delivered: PHIPA gap analysis, workflow process maps, EMR/EHR readiness report, phased roadmap, staff communication templates.</div>
+      </div>
+      <div>
+        <div class="pouts">
+          <div class="pout"><div class="poi"></div><div class="pot"><span class="potl">Compliance</span>Full PHIPA gap analysis mapping each privacy principle to current practice</div></div>
+          <div class="pout"><div class="poi"></div><div class="pot"><span class="potl">Documentation</span>Staff guide written in plain language enabling teams to manage new protocols independently</div></div>
+          <div class="pout"><div class="poi"></div><div class="pot"><span class="potl">Readiness</span>EMR/EHR readiness assessment directly applicable to Canadian health authority environments</div></div>
+        </div>
+        <div class="ptools">
+          <span class="tool">Lucidchart</span><span class="tool">Notion</span><span class="tool">Excel</span><span class="tool">Figma</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div>
+        <div class="pnum">02 / PROJECT</div>
+        <h3 class="ptitle">3 Years of Administrative Operations Across Multiple Concurrent Clients</h3>
+        <div class="ptags">
+          <span class="ptag">Administration</span>
+          <span class="ptag">Scheduling</span>
+          <span class="ptag">Documentation</span>
+          <span class="ptag">Records Management</span>
+        </div>
+      </div>
+      <div>
+        <div class="padmin-lens">
+          <div class="padmin-lens-label">What this means for your office</div>
+          <div class="padmin-lens-text">I have managed the administrative operations of multiple clients at the same time, independently, for three years. I do not miss deadlines. I document everything. I build the kind of filing and scheduling systems that work when I am not there.</div>
+        </div>
+        <p class="pdesc">Managed all administrative coordination for 5 or more concurrent client engagements over three years. Responsibilities included calendar and schedule management, email correspondence, document preparation, digital filing, data entry, invoicing, onboarding new clients to workflow tools, and maintaining accurate records throughout.</p>
+        <div class="pdel">Delivered: correspondence management, scheduling systems, SOPs for 3 clients, version-controlled filing, reporting frameworks, onboarding documentation.</div>
+      </div>
+      <div>
+        <div class="pouts">
+          <div class="pout"><div class="poi gold"></div><div class="pot"><span class="potl">Reliability</span>Zero missed deadlines across 3+ years of concurrent client management</div></div>
+          <div class="pout"><div class="poi gold"></div><div class="pot"><span class="potl">Systems</span>Filing and documentation systems adopted permanently by 3 clients</div></div>
+          <div class="pout"><div class="poi gold"></div><div class="pot"><span class="potl">Retention</span>100% client retention rate throughout the entire track record</div></div>
+        </div>
+        <div class="ptools">
+          <span class="tool">Microsoft 365</span><span class="tool">Google Workspace</span><span class="tool">Notion</span><span class="tool">Trello</span><span class="tool">Jira</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pc">
+      <div>
+        <div class="pnum">03 / PROJECT</div>
+        <h3 class="ptitle">Operational Documentation and Process Systems for a Technology Organisation</h3>
+        <div class="ptags">
+          <span class="ptag">Documentation</span>
+          <span class="ptag">Process Design</span>
+          <span class="ptag">Office Systems</span>
+          <span class="ptag">Team Support</span>
+        </div>
+      </div>
+      <div>
+        <div class="padmin-lens">
+          <div class="padmin-lens-label">What this means for your office</div>
+          <div class="padmin-lens-text">I built the administrative backbone of a full organisation. I know how to set up systems that do not require constant management, write documentation that new staff can follow, and keep records that hold up to scrutiny. That is what I bring to your front desk or admin role.</div>
+        </div>
+        <p class="pdesc">Served as the sole administrative and operations function for a technology organisation over 14 months. Built all workflow documentation, office procedures, and communication frameworks from zero while coordinating 5 or more active client workstreams simultaneously. Produced an SOP library, onboarding documentation, and reporting systems that the team continues to use.</p>
+        <div class="pdel">Delivered: 8 SOPs permanently adopted, onboarding documentation, scheduling and reporting systems, compliance-ready records, office procedure guides.</div>
+      </div>
+      <div>
+        <div class="pouts">
+          <div class="pout"><div class="poi blue"></div><div class="pot"><span class="potl">Efficiency</span>30% reduction in process errors through standardised office documentation</div></div>
+          <div class="pout"><div class="poi blue"></div><div class="pot"><span class="potl">Onboarding</span>Client onboarding time reduced from 5 days to 2 days through structured documentation</div></div>
+          <div class="pout"><div class="poi blue"></div><div class="pot"><span class="potl">Continuity</span>Systems and SOPs remained in use after my involvement ended, with no retraining required</div></div>
+        </div>
+        <div class="ptools">
+          <span class="tool">Notion</span><span class="tool">Jira</span><span class="tool">Confluence</span><span class="tool">Google Workspace</span><span class="tool">Microsoft 365</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec sec-alt" id="skills">
+  <div class="wsec-hd">
+    <div>
+      <div class="sec-label rev"><div class="sec-ll"></div><span class="sec-lt">Capabilities</span></div>
+      <h2 class="sec-h2 rev">Skills and <em>Competencies</em></h2>
+    </div>
+  </div>
+  <div class="sgrid">
+    <div class="sc">
+      <div class="sci">01 / Medical Office</div>
+      <h4>Healthcare and Medical Office</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>PHIPA / HIPAA Compliance Awareness</div>
+        <div class="se ft"><div class="sd"></div>Patient Records and File Management</div>
+        <div class="se ft"><div class="sd"></div>EMR / EHR Workflow Familiarity</div>
+        <div class="se ft"><div class="sd"></div>Consent and Privacy Protocol Management</div>
+        <div class="se"><div class="sd"></div>Clinical Documentation Standards</div>
+        <div class="se"><div class="sd"></div>Appointment Booking and Scheduling</div>
+        <div class="se"><div class="sd"></div>Audit-Ready Recordkeeping</div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sci">02 / Administration</div>
+      <h4>Administrative Operations</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>Calendar and Schedule Management</div>
+        <div class="se ft"><div class="sd"></div>Email and Correspondence Handling</div>
+        <div class="se ft"><div class="sd"></div>Document Preparation and Filing</div>
+        <div class="se ft"><div class="sd"></div>Data Entry and Accuracy</div>
+        <div class="se"><div class="sd"></div>Meeting Coordination and Minutes</div>
+        <div class="se"><div class="sd"></div>Confidential Information Handling</div>
+        <div class="se"><div class="sd"></div>SOP Writing and Office Procedure Design</div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sci">03 / Front Desk</div>
+      <h4>Reception and Patient Services</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>Professional Client and Patient Communication</div>
+        <div class="se ft"><div class="sd"></div>Multi-line Communication Management</div>
+        <div class="se ft"><div class="sd"></div>Visitor and Patient Intake Coordination</div>
+        <div class="se"><div class="sd"></div>Appointment Booking and Reminders</div>
+        <div class="se"><div class="sd"></div>Calm Under High Volume and Pressure</div>
+        <div class="se"><div class="sd"></div>Message Taking and Follow-Up</div>
+        <div class="se"><div class="sd"></div>New System Adoption, Fast</div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sci">04 / Office Tools</div>
+      <h4>Software and Technology</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>Microsoft 365 (Word, Excel, Outlook, PowerPoint)</div>
+        <div class="se ft"><div class="sd"></div>Google Workspace (Docs, Sheets, Calendar, Gmail)</div>
+        <div class="se ft"><div class="sd"></div>Scheduling and Booking Tools</div>
+        <div class="se"><div class="sd"></div>Jira and Project Tracking Tools</div>
+        <div class="se"><div class="sd"></div>Notion, ClickUp, Trello</div>
+        <div class="se"><div class="sd"></div>SharePoint and Cloud File Management</div>
+        <div class="se"><div class="sd"></div>Any EMR/EHR: quick to train and adopt</div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sci">05 / Professional</div>
+      <h4>Professional Qualities</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>Reliable: zero missed deadlines, 3+ years</div>
+        <div class="se ft"><div class="sd"></div>Discreet: confidential data handled correctly, always</div>
+        <div class="se ft"><div class="sd"></div>Organised: nothing falls through without a system</div>
+        <div class="se"><div class="sd"></div>Patient and professional with all types of people</div>
+        <div class="se"><div class="sd"></div>Clear written and spoken English communication</div>
+        <div class="se"><div class="sd"></div>Independent: does not need daily direction</div>
+        <div class="se"><div class="sd"></div>Proactive: flags issues before they become problems</div>
+      </div>
+    </div>
+    <div class="sc">
+      <div class="sci">06 / Credentials</div>
+      <h4>Certifications at a Glance</h4>
+      <div class="slist">
+        <div class="se ft"><div class="sd"></div>Google Project Management Certificate (2025)</div>
+        <div class="se ft"><div class="sd"></div>CISSP: Information Systems Security (2023)</div>
+        <div class="se ft"><div class="sd"></div>Data Privacy Fundamentals</div>
+        <div class="se"><div class="sd"></div>Agile Fundamentals</div>
+        <div class="se"><div class="sd"></div>HIPAA Awareness (In Progress, 2026)</div>
+        <div class="se"><div class="sd"></div>BBIT: Multimedia University of Kenya</div>
+        <div class="se"><div class="sd"></div>WES Credential Assessment in Progress</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="sec sec-white" id="credentials">
+  <div class="wsec-hd">
+    <div>
+      <div class="sec-label rev"><div class="sec-ll"></div><span class="sec-lt">Credentials</span></div>
+      <h2 class="sec-h2 rev">Certifications and <em>Qualifications</em></h2>
+    </div>
+  </div>
+  <div class="cgrid">
+    <div class="cc">
+      <div class="cy">APRIL 2025</div>
+      <div class="ct2">Google Project Management Certificate</div>
+      <div class="ciss">Google / Coursera</div>
+      <div class="cid">Credential ID: VJC1ME5TYZIQ</div>
+    </div>
+    <div class="cc">
+      <div class="cy">DECEMBER 2023</div>
+      <div class="ct2">CISSP: Certified Information Systems Security Professional</div>
+      <div class="ciss">Simplilearn</div>
+      <div class="cid">Credential ID: 4721882</div>
+    </div>
+    <div class="cc">
+      <div class="cy">VERIFIED</div>
+      <div class="ct2">Data Privacy Fundamentals</div>
+      <div class="ciss">Verified completion</div>
+      <div class="cid">Applied in PHIPA work and all patient data handling</div>
+    </div>
+    <div class="cc">
+      <div class="cy">VERIFIED</div>
+      <div class="ct2">Agile Fundamentals</div>
+      <div class="ciss">Verified completion</div>
+      <div class="cid">Applied across administrative and project engagements</div>
+    </div>
+    <div class="cc">
+      <div class="cy">IN PROGRESS 2026</div>
+      <div class="ct2">HIPAA Awareness for Healthcare Professionals</div>
+      <div class="ciss">Active completion</div>
+      <div class="cid">Complementary to existing PHIPA compliance knowledge</div>
+    </div>
+    <div class="cc">
+      <div class="cy">BACHELOR OF BUSINESS INFORMATION TECHNOLOGY</div>
+      <div class="ct2">Multimedia University of Kenya</div>
+      <div class="ciss">Information Technology</div>
+      <div class="cid">WES Educational Credential Assessment in progress</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="ctsec" id="contact">
+  <div class="ctinner">
+    <div>
+      <div class="sec-label rev" style="margin-bottom:12px">
+        <div class="sec-ll" style="background:var(--teal-bd)"></div>
+        <span class="sec-lt" style="color:var(--teal-bd)">Get in Touch</span>
+      </div>
+      <h2 class="cth rev">
+        Ready to be <em>exactly what your office needs.</em>
+      </h2>
+      <p class="ctsub rev">
+        Reliable, PHIPA-aware, professionally trained, and available to start promptly.
+        <strong>References available from verified paid client engagements.</strong>
+        <span class="open-note">Actively seeking full-time roles as Administrative Assistant, Medical Office Assistant, Clinic Clerk, Patient Services Clerk, or Receptionist. Open to opportunities across Canada.</span>
+      </p>
+    </div>
+    <div class="ctlinks">
+      <a href="mailto:amariayrin@gmail.com" class="ctl">
+        <div><div class="ctlt">Email</div><div class="ctlv">amariayrin@gmail.com</div></div>
+        <div class="ctarr">&#x2197;</div>
+      </a>
+      <a href="https://linkedin.com/in/darlene-brooke" class="ctl" target="_blank" rel="noopener">
+        <div><div class="ctlt">LinkedIn</div><div class="ctlv">linkedin.com/in/darlene-brooke</div></div>
+        <div class="ctarr">&#x2197;</div>
+      </a>
+      <a href="tel:+254113232734" class="ctl">
+        <div><div class="ctlt">Phone</div><div class="ctlv">+254 113 232 734</div></div>
+        <div class="ctarr">&#x2197;</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="fn">Darlene Bridgete</span>
+  <span class="fc">Administrative and Healthcare Office Professional</span>
+</footer>
+
+<script>
+const nb=document.getElementById('nb');
+const prog=document.getElementById('prog');
+window.addEventListener('scroll',()=>{
+  nb.classList.toggle('sc',scrollY>50);
+  const p=scrollY/(document.documentElement.scrollHeight-innerHeight);
+  prog.style.transform='scaleX('+p+')';
+},{passive:true});
+
+function countUp(el){
+  const target=+el.dataset.t,dur=1400,start=performance.now();
+  const ease=t=>1-Math.pow(1-t,3);
+  (function tick(now){
+    const t=Math.min((now-start)/dur,1);
+    el.textContent=Math.round(ease(t)*target);
+    if(t<1)requestAnimationFrame(tick);
+    else el.textContent=target;
+  })(start);
+}
+const cobs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.querySelectorAll('.cnt').forEach(countUp);cobs.unobserve(e.target);}
+  });
+},{threshold:.5});
+const statEl=document.querySelector('.hstats');
+if(statEl)cobs.observe(statEl);
+
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});
+},{threshold:.09,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.rev,.eitem,.pc,.sc,.cc,.role-card').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.eitem').forEach((el,i)=>el.style.transitionDelay=(i*.08)+'s');
+document.querySelectorAll('.cc').forEach((el,i)=>el.style.transitionDelay=(i*.055)+'s');
+document.querySelectorAll('.sc').forEach((el,i)=>el.style.transitionDelay=(i*.05)+'s');
+document.querySelectorAll('.pc').forEach((el,i)=>el.style.transitionDelay=(i*.08)+'s');
+document.querySelectorAll('.role-card').forEach((el,i)=>el.style.transitionDelay=(i*.06)+'s');
+</script>
+</body>
+</html>
