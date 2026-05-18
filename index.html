@@ -1,760 +1,1302 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darlene Bridgete &mdash; Operations and Systems Professional</title>
-<meta name="description" content="Healthcare administration and operations professional specialising in service delivery, workflow design, and operational systems. Available for roles in the UK, EU, and globally.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
-<style>
-:root {
-  --ink:      #0D1117;
-  --ink-mid:  #3A3D45;
-  --ink-dim:  #6B6F7A;
-  --cream:    #F6F1EB;
-  --warm:     #EDE6DC;
-  --paper:    #FFFFFF;
-  --navy:     #112244;
-  --navy-lg:  #1B3A6B;
-  --gold:     #B8872A;
-  --gold-lt:  #D4A84B;
-  --teal:     #1A5A5A;
-  --rule:     rgba(13,17,23,.09);
-  --rule-wm:  rgba(246,241,235,.12);
-  --r:        8px;
-  --display:  'Cormorant Garamond', Georgia, serif;
-  --body:     'DM Sans', system-ui, sans-serif;
-  --mono:     'DM Mono', 'Courier New', monospace;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darlene Bridgete | Business Systems Analyst</title>
+  <meta name="description" content="Business Systems Analyst and Digital Transformation Specialist. Healthcare Informatics, AI Operations, SaaS Product Design. UK and Global.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-body { font-family: var(--body); background: var(--cream); color: var(--ink); overflow-x: hidden; }
-a { color: inherit; text-decoration: none; }
+  <style>
+    /* ─── TOKENS ─── */
+    :root {
+      --cream:      #F6F2EB;
+      --cream-2:    #EDE9E1;
+      --cream-3:    #E3DED5;
+      --forest:     #1C3320;
+      --forest-mid: #2B4D31;
+      --forest-lt:  #3D6645;
+      --terra:      #B84E28;
+      --terra-lt:   #D0613A;
+      --terra-dim:  rgba(184,78,40,0.1);
+      --terra-bdr:  rgba(184,78,40,0.25);
+      --ink:        #15120D;
+      --ink-muted:  #6B5D50;
+      --ink-dim:    #A89C91;
+      --rule:       #D8D2C8;
+      --rule-lt:    #EAE5DC;
+    }
 
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--cream); }
-::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; }
+    /* ─── RESET ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--forest); color: var(--cream); }
+    ::-webkit-scrollbar { width: 3px; }
+    ::-webkit-scrollbar-track { background: var(--cream-2); }
+    ::-webkit-scrollbar-thumb { background: var(--forest-mid); }
 
-.label {
-  font-family: var(--mono); font-size: 10px;
-  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-dim);
-}
-.label--gold { color: var(--gold); }
-.label--dim  { color: rgba(246,241,235,.4); }
+    /* ─── TYPE SCALE ─── */
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
 
-/* REVEAL */
-.reveal {
-  opacity: 0; transform: translateY(20px);
-  transition: opacity .65s cubic-bezier(.25,.46,.45,.94),
-              transform .65s cubic-bezier(.25,.46,.45,.94);
-}
-.reveal.vis { opacity: 1; transform: none; }
-.d1 { transition-delay:.08s } .d2 { transition-delay:.16s }
-.d3 { transition-delay:.24s } .d4 { transition-delay:.32s }
-.d5 { transition-delay:.40s }
+    /* ─── NAVIGATION ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 600;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+      border-bottom: 1px solid transparent;
+    }
+    nav.scrolled {
+      background: rgba(246,242,235,0.95);
+      border-bottom-color: var(--rule);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .nav-brand {
+      font-family: 'Fraunces', serif;
+      font-size: 17px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--forest);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--forest); }
+    .nav-cta {
+      display: inline-block;
+      padding: 9px 22px;
+      background: var(--forest);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--forest-mid); }
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 20px 48px; display: flex; justify-content: space-between; align-items: center;
-  transition: background .3s, box-shadow .3s;
-}
-nav.scrolled {
-  background: rgba(246,241,235,.93); backdrop-filter: blur(14px);
-  box-shadow: 0 1px 0 var(--rule);
-}
-.nav-brand { font-family: var(--display); font-size: 19px; font-weight: 400; color: var(--navy); letter-spacing:.02em; }
-.nav-links { display: flex; gap: 36px; list-style: none; }
-.nav-links a {
-  font-size: 11px; font-weight: 500; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink-mid); transition: color .18s;
-}
-.nav-links a:hover { color: var(--navy); }
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      padding: 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-top {
+      display: flex;
+      align-items: flex-end;
+      padding-top: 160px;
+      padding-bottom: 56px;
+    }
+    .hero-headline-wrap {
+      flex: 1;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.1s forwards;
+    }
+    .live-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--forest-lt);
+      animation: dotPulse 2.5s ease infinite;
+    }
+    @keyframes dotPulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.5; transform: scale(0.7); }
+    }
+    .eyebrow-txt {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--forest-lt);
+    }
+    .hero-name {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(72px, 11vw, 148px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 0.9;
+      color: var(--forest);
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.25s forwards;
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--terra);
+    }
+    .hero-meta {
+      display: flex;
+      align-items: flex-start;
+      gap: 60px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.42s forwards;
+    }
+    .hero-title-block {}
+    .hero-role {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(17px, 1.7vw, 22px);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .hero-sub {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--ink-muted);
+      line-height: 1.65;
+      max-width: 460px;
+      font-style: italic;
+    }
+    .hero-tags-block {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-top: 4px;
+    }
+    .htag {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: 5px 14px;
+      border: 1px solid var(--rule);
+      background: var(--cream-2);
+      width: fit-content;
+    }
 
-/* HERO */
-#hero {
-  min-height: 100vh; background: var(--navy);
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 0 48px 80px; position: relative; overflow: hidden;
-}
-.hero-bg {
-  position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 70% 60% at 80% 20%, rgba(184,135,42,.10) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 70% at 10% 80%, rgba(26,90,90,.18) 0%, transparent 60%);
-}
-.hero-grid-lines {
-  position: absolute; inset: 0; pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-  background-size: 88px 88px;
-}
-.hero-inner { position: relative; z-index: 2; max-width: 1080px; }
-.hero-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
-.hero-rule-line { width: 44px; height: 1px; background: var(--gold); }
-.hero-name {
-  font-family: var(--display); font-size: clamp(56px,10vw,112px);
-  font-weight: 300; color: var(--cream); line-height: .93;
-  letter-spacing: -.025em; margin-bottom: 40px;
-}
-.hero-name em { font-style: italic; color: var(--gold-lt); }
-.hero-bottom { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: flex-end; }
-.hero-strapline {
-  font-size: clamp(15px,2vw,19px); font-weight: 300;
-  color: rgba(246,241,235,.6); max-width: 520px; line-height: 1.65;
-}
-.hero-actions { display: flex; gap: 12px; flex-shrink: 0; }
-.btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 13px 24px; border-radius: 4px; font-family: var(--body);
-  font-size: 12px; font-weight: 500; letter-spacing: .08em;
-  text-transform: uppercase; cursor: pointer; transition: all .2s;
-}
-.btn-gold { background: var(--gold); color: var(--navy); border: 1px solid var(--gold); }
-.btn-gold:hover { background: var(--gold-lt); border-color: var(--gold-lt); }
-.btn-ghost { background: transparent; color: var(--cream); border: 1px solid rgba(255,255,255,.22); }
-.btn-ghost:hover { border-color: rgba(255,255,255,.5); }
-.hero-scroll-indicator {
-  position: absolute; bottom: 36px; right: 48px;
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-}
-.hsi-line {
-  width: 1px; height: 64px;
-  background: linear-gradient(to bottom, rgba(184,135,42,.7), transparent);
-  animation: lineAnim 2.4s ease-in-out infinite;
-}
-.hsi-label {
-  font-family: var(--mono); font-size: 9px; letter-spacing: .18em;
-  text-transform: uppercase; color: rgba(246,241,235,.28);
-  writing-mode: vertical-rl;
-}
-@keyframes lineAnim { 0%,100%{opacity:.4} 50%{opacity:1} }
+    /* large italic watermark */
+    .hero-watermark {
+      position: absolute;
+      bottom: -40px;
+      right: -20px;
+      font-family: 'Fraunces', serif;
+      font-size: clamp(140px, 22vw, 280px);
+      font-weight: 900;
+      font-style: italic;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--cream-3);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
 
-/* SECTIONS */
-section { padding: 108px 48px; }
-.inner { max-width: 1080px; margin: 0 auto; }
-.sec-hd {
-  display: grid; grid-template-columns: auto 1fr;
-  gap: 22px; align-items: center; margin-bottom: 72px;
-}
-.sec-hd::after { content:''; height: 1px; background: var(--rule); }
-.sec-hd--light::after { background: var(--rule-wm); }
-.sec-title {
-  font-family: var(--display); font-size: clamp(30px,4.5vw,52px);
-  font-weight: 300; color: var(--ink); line-height: 1; white-space: nowrap;
-}
-.sec-title--light { color: var(--cream); }
+    .hero-bottom {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      opacity: 0;
+      animation: riseIn 0.9s cubic-bezier(.22,1,.36,1) 0.58s forwards;
+    }
+    .hb-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .hb-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+    }
+    .hb-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .hb-div {
+      width: 1px;
+      height: 36px;
+      background: var(--rule);
+    }
+    .hero-ctas {
+      margin-left: auto;
+      display: flex;
+      gap: 12px;
+    }
+    .btn-forest {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--forest);
+      color: var(--cream);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-forest:hover { background: var(--forest-mid); transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      padding: 12px 28px;
+      background: transparent;
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--forest); color: var(--forest); }
 
-/* ABOUT */
-#about { background: var(--cream); }
-.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 88px; align-items: start; }
-.stats-stack { margin-top: 52px; }
-.stat-row { padding: 20px 0; border-bottom: 1px solid var(--rule); }
-.stat-row:first-child { border-top: 1px solid var(--rule); }
-.stat-num { font-family: var(--display); font-size: 44px; font-weight: 300; color: var(--navy); line-height: 1; margin-bottom: 5px; }
-.stat-lbl { font-size: 13px; color: var(--ink-dim); font-weight: 300; }
-.about-intro {
-  font-family: var(--display); font-size: clamp(22px,3.2vw,32px);
-  font-weight: 300; color: var(--navy); line-height: 1.35;
-  margin-bottom: 28px; letter-spacing: -.01em;
-}
-.about-intro em { font-style: italic; color: var(--gold); }
-.about-p {
-  font-size: 15px; font-weight: 300; color: var(--ink-mid);
-  line-height: 1.85; margin-bottom: 16px;
-}
-.tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 32px; }
-.tag {
-  padding: 6px 14px; border: 1px solid var(--rule); border-radius: 100px;
-  font-size: 12px; color: var(--ink-mid); transition: all .18s; cursor: default;
-}
-.tag:hover { background: var(--navy); border-color: var(--navy); color: var(--cream); }
+    @keyframes riseIn {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
 
-/* EXPERTISE */
-#expertise { background: var(--warm); }
-.expertise-grid {
-  display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 2px; background: var(--rule); border: 1px solid var(--rule);
-  border-radius: var(--r); overflow: hidden;
-}
-.exp-card { background: var(--warm); padding: 48px 36px; transition: background .2s; }
-.exp-card:hover { background: var(--cream); }
-.exp-icon {
-  width: 46px; height: 46px; border-radius: 10px;
-  border: 1px solid var(--rule); display: flex; align-items: center;
-  justify-content: center; font-size: 20px; margin-bottom: 28px;
-  transition: border-color .2s;
-}
-.exp-card:hover .exp-icon { border-color: var(--gold); }
-.exp-card-title {
-  font-family: var(--display); font-size: 22px; font-weight: 400;
-  color: var(--navy); margin-bottom: 14px; line-height: 1.2;
-}
-.exp-card-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.78; font-weight: 300; }
-.exp-items { list-style: none; margin-top: 22px; }
-.exp-items li {
-  font-size: 12px; color: var(--ink-dim); padding: 6px 0;
-  border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 9px;
-}
-.exp-items li::before {
-  content:''; width: 4px; height: 4px; border-radius: 50%;
-  background: var(--gold); flex-shrink: 0;
-}
+    /* ─── MARQUEE ─── */
+    .marquee-band {
+      background: var(--forest);
+      overflow: hidden;
+      padding: 13px 0;
+    }
+    .mq-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 36s linear infinite;
+    }
+    .mq-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 0 28px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(246,242,235,0.55);
+      white-space: nowrap;
+    }
+    .mq-dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--terra-lt);
+      flex-shrink: 0;
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
 
-/* WORK HISTORY */
-#history { background: var(--navy); }
-.hist-list { display: flex; flex-direction: column; gap: 2px; }
-.hist-item {
-  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07);
-  border-radius: var(--r); padding: 40px 44px;
-  display: grid; grid-template-columns: 190px 1fr; gap: 52px;
-  transition: background .2s;
-}
-.hist-item:hover { background: rgba(255,255,255,.07); }
-.hist-period { font-family: var(--mono); font-size: 11px; color: var(--gold); letter-spacing:.12em; margin-bottom: 8px; }
-.hist-org { font-size: 13px; color: rgba(246,241,235,.4); line-height: 1.6; }
-.hist-role {
-  font-family: var(--display); font-size: 25px; font-weight: 400;
-  color: var(--cream); margin-bottom: 18px; line-height: 1.2;
-}
-.hist-buls { list-style: none; }
-.hist-buls li {
-  font-size: 14px; font-weight: 300; color: rgba(246,241,235,.62);
-  padding: 7px 0 7px 20px; border-bottom: 1px solid rgba(255,255,255,.05);
-  position: relative; line-height: 1.65;
-}
-.hist-buls li:last-child { border-bottom: none; }
-.hist-buls li::before {
-  content:''; position: absolute; left: 0; top: 15px;
-  width: 6px; height: 1px; background: var(--gold);
-}
+    /* ─── SECTION BASE ─── */
+    section {
+      padding: 100px 60px;
+      border-top: 1px solid var(--rule);
+    }
+    .sec-hdr {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+    .sn {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    .st {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(28px, 3.2vw, 44px);
+      font-weight: 700;
+      color: var(--forest);
+      letter-spacing: -0.03em;
+    }
+    .sr { flex: 1; height: 1px; background: var(--rule); align-self: center; }
 
-/* CASE STUDIES */
-#cases { background: var(--cream); }
-.cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.case-card {
-  background: var(--paper); border: 1px solid var(--rule); border-radius: var(--r);
-  overflow: hidden; transition: box-shadow .28s, transform .28s;
-}
-.case-card:hover { box-shadow: 0 14px 52px rgba(17,34,68,.09); transform: translateY(-3px); }
-.case-card--wide { grid-column: 1/-1; }
-.case-accent { height: 4px; }
-.ca-navy { background: linear-gradient(90deg, var(--navy), var(--gold)); }
-.ca-teal { background: linear-gradient(90deg, var(--teal), var(--gold)); }
-.ca-gold { background: linear-gradient(90deg, var(--gold), #E8C06A); }
-.case-body { padding: 40px; }
-.case-tag { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-.case-title { font-family: var(--display); font-size: 28px; font-weight: 400; color: var(--navy); line-height: 1.2; margin-bottom: 18px; }
-.case-desc { font-size: 14px; font-weight: 300; color: var(--ink-mid); line-height: 1.82; margin-bottom: 24px; }
-.case-outcomes { display: flex; gap: 28px; padding-top: 22px; border-top: 1px solid var(--rule); flex-wrap: wrap; }
-.outcome-num { font-family: var(--display); font-size: 30px; font-weight: 400; color: var(--navy); line-height: 1; margin-bottom: 3px; }
-.outcome-lbl { font-size: 11px; color: var(--ink-dim); }
+    /* ─── REVEAL ─── */
+    .rv {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+    }
+    .rv.in { opacity: 1; transform: translateY(0); }
 
-/* CREDENTIALS */
-#credentials { background: var(--warm); }
-.creds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
-.creds-col-title {
-  font-family: var(--display); font-size: 20px; font-weight: 400; color: var(--navy);
-  margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--navy);
-}
-.cred-row {
-  display: grid; grid-template-columns: 1fr auto;
-  gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: start;
-}
-.cred-title { font-size: 14px; font-weight: 400; color: var(--ink); line-height: 1.4; }
-.cred-sub { font-size: 12px; color: var(--ink-dim); margin-top: 3px; }
-.cred-note-text { font-size: 11px; color: var(--gold); margin-top: 4px; }
-.cred-yr { font-family: var(--mono); font-size: 11px; color: var(--ink-dim); letter-spacing: .07em; white-space: nowrap; }
-.skills-wrap { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 6px; }
-.sk {
-  padding: 5px 12px; background: var(--cream); border: 1px solid var(--rule);
-  border-radius: 100px; font-size: 12px; color: var(--ink-mid);
-  transition: all .16s; cursor: default;
-}
-.sk:hover { background: var(--navy); border-color: var(--navy); color: var(--cream); }
-.lang-row { padding: 14px 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; }
-.lang-name { font-size: 14px; color: var(--ink); }
-.lang-lvl { font-family: var(--mono); font-size: 11px; color: var(--ink-dim); }
+    /* ─── ABOUT ─── */
+    .about-layout {
+      display: grid;
+      grid-template-columns: 5fr 4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .about-left {}
+    .about-pull {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(22px, 2.6vw, 34px);
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+      color: var(--forest);
+      margin-bottom: 32px;
+    }
+    .about-pull em { font-style: italic; color: var(--terra); }
+    .about-body p {
+      font-size: 15px;
+      line-height: 1.88;
+      color: var(--ink-muted);
+      margin-bottom: 16px;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { color: var(--ink); font-weight: 600; }
+    .about-right {}
+    .stat-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--rule);
+    }
+    .stat-row {
+      padding: 24px 26px;
+      border-bottom: 1px solid var(--rule);
+      background: var(--cream);
+      transition: background 0.2s;
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-row:hover { background: var(--cream-2); }
+    .stat-n {
+      font-family: 'Fraunces', serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--forest);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 4px;
+    }
+    .stat-n span { color: var(--terra); }
+    .stat-l {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+    }
 
-/* CONTACT */
-#contact { background: var(--navy); padding: 88px 48px; }
-.contact-inner {
-  max-width: 1080px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr auto; gap: 64px; align-items: center;
-}
-.contact-heading {
-  font-family: var(--display); font-size: clamp(30px,5vw,54px);
-  font-weight: 300; color: var(--cream); line-height: 1.15; margin-bottom: 22px;
-}
-.contact-heading em { font-style: italic; color: var(--gold-lt); }
-.contact-body {
-  font-size: 15px; font-weight: 300; color: rgba(246,241,235,.58); line-height: 1.72; max-width: 460px;
-}
-.avail-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
-.chip {
-  display: flex; align-items: center; gap: 8px;
-  padding: 8px 16px; border: 1px solid rgba(255,255,255,.11); border-radius: 100px;
-  font-size: 12px; color: rgba(246,241,235,.65);
-}
-.chip-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--gold);
-  animation: pd 2.2s ease-in-out infinite;
-}
-@keyframes pd { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.55;transform:scale(.82)} }
-.contact-ctas { display: flex; flex-direction: column; gap: 12px; min-width: 232px; }
-.contact-link { font-family: var(--mono); font-size: 11px; color: rgba(246,241,235,.32); letter-spacing: .07em; text-align: center; margin-top: 6px; }
+    /* ─── EXPERTISE ─── */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .exp-card {
+      background: var(--cream);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background 0.25s;
+    }
+    .exp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--forest);
+      transition: height 0.35s cubic-bezier(.22,1,.36,1);
+    }
+    .exp-card:hover { background: var(--cream-2); }
+    .exp-card:hover::before { height: 100%; }
+    .ec-icon { font-size: 20px; margin-bottom: 16px; display: block; line-height: 1; }
+    .ec-name {
+      font-family: 'Fraunces', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 9px;
+      letter-spacing: -0.02em;
+    }
+    .ec-desc { font-size: 13px; color: var(--ink-muted); line-height: 1.65; }
 
-/* FOOTER */
-footer {
-  background: #090D16; padding: 28px 48px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.footer-mark { font-family: var(--display); font-size: 17px; color: rgba(246,241,235,.35); }
-.footer-note { font-family: var(--mono); font-size: 10px; color: rgba(246,241,235,.2); letter-spacing: .08em; }
+    /* ─── WORK / CASE STUDIES ─── */
+    .work-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--rule);
+    }
+    .work-item {
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.25s;
+    }
+    .work-item:last-child { border-bottom: none; }
+    .work-item:hover { background: var(--cream-2); }
+    .work-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 44px;
+      cursor: pointer;
+      gap: 24px;
+    }
+    .work-left { display: flex; align-items: center; gap: 28px; flex: 1; }
+    .work-num {
+      font-family: 'Fraunces', serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--cream-3);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      flex-shrink: 0;
+      user-select: none;
+      transition: color 0.2s;
+    }
+    .work-item:hover .work-num { color: var(--rule); }
+    .work-titles {}
+    .work-tag {
+      display: inline-flex;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terra);
+      padding: 3px 10px;
+      background: var(--terra-dim);
+      border: 1px solid var(--terra-bdr);
+      margin-bottom: 8px;
+    }
+    .work-title {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(18px, 2vw, 26px);
+      font-weight: 700;
+      color: var(--forest);
+      letter-spacing: -0.025em;
+    }
+    .work-period {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+    .work-arrow {
+      font-size: 18px;
+      color: var(--ink-dim);
+      transition: transform 0.3s cubic-bezier(.22,1,.36,1), color 0.2s;
+      flex-shrink: 0;
+    }
+    .work-item.open .work-arrow { transform: rotate(90deg); color: var(--forest); }
+    .work-body {
+      display: none;
+      padding: 0 44px 44px;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      border-top: 1px solid var(--rule-lt);
+    }
+    .work-item.open .work-body { display: grid; }
+    .work-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 12px;
+      padding-top: 32px;
+    }
+    .work-problem {
+      font-size: 14px;
+      font-style: italic;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .work-approach {
+      font-size: 14px;
+      color: var(--ink);
+      line-height: 1.85;
+    }
+    .outcomes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--rule-lt);
+      margin-top: 32px;
+    }
+    .oc {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--rule-lt);
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.55;
+      background: var(--cream);
+    }
+    .oc:last-child { border-bottom: none; }
+    .oc-n {
+      font-family: 'Fraunces', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--terra);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  section { padding: 72px 24px; } nav { padding: 16px 24px; }
-  .nav-links { display: none; }
-  #hero { padding: 0 24px 60px; }
-  .hero-bottom { grid-template-columns: 1fr; gap: 24px; }
-  .hero-scroll-indicator { display: none; }
-  .about-grid { grid-template-columns: 1fr; gap: 52px; }
-  .expertise-grid { grid-template-columns: 1fr; }
-  .hist-item { grid-template-columns: 1fr; gap: 14px; padding: 28px 24px; }
-  .cases-grid { grid-template-columns: 1fr; }
-  .case-card--wide { grid-column: 1; }
-  .creds-grid { grid-template-columns: 1fr; gap: 44px; }
-  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
-  footer { flex-direction: column; gap: 10px; text-align: center; }
-}
-@media(max-width:600px){
-  .sec-hd { grid-template-columns: 1fr; } .sec-hd::after { display: none; }
-  .case-body { padding: 24px; }
-  .exp-card { padding: 28px 22px; }
-}
-</style>
+    /* ─── EXPERIENCE ─── */
+    .xp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--rule);
+    }
+    .xp {
+      padding: 44px;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      background: var(--cream);
+      transition: background 0.25s;
+    }
+    .xp:last-child { border-bottom: none; }
+    .xp:hover { background: var(--cream-2); }
+    .xp-date {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      line-height: 1.6;
+      padding-top: 4px;
+    }
+    .xp-date strong {
+      display: block;
+      font-size: 13px;
+      color: var(--forest);
+      margin-bottom: 3px;
+    }
+    .xp-org {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 8px;
+    }
+    .xp-role {
+      font-family: 'Fraunces', serif;
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .xp-body {
+      font-size: 14px;
+      color: var(--ink-muted);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+    .xp-body:last-of-type { margin-bottom: 20px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+    .tag {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      padding: 4px 12px;
+      border: 1px solid var(--rule);
+      color: var(--ink-muted);
+      background: var(--cream);
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .tag:hover { border-color: var(--forest); color: var(--forest); background: var(--cream-2); }
+
+    /* ─── CREDENTIALS ─── */
+    .creds-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .cred {
+      background: var(--cream);
+      padding: 34px 30px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: background 0.25s;
+    }
+    .cred:hover { background: var(--cream-2); }
+    .cred-ic {
+      width: 46px; height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream-2);
+      border: 1px solid var(--rule);
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+    .cred-tp {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terra);
+      margin-bottom: 5px;
+    }
+    .cred-nm {
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+    .cred-is { font-size: 13px; color: var(--ink-muted); }
+
+    /* ─── CONTACT ─── */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .contact-pull {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(24px, 3vw, 40px);
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1.25;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .contact-pull em { font-style: italic; color: var(--terra); }
+    .contact-body {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.75;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 14px; }
+    .clink {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px 22px;
+      background: var(--cream-2);
+      border: 1px solid var(--rule);
+      text-decoration: none;
+      transition: border-color 0.25s, background 0.25s, transform 0.2s;
+    }
+    .clink:hover {
+      border-color: var(--forest);
+      background: var(--cream-3);
+      transform: translateX(4px);
+    }
+    .clink-ic {
+      width: 40px; height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--forest);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    .clink-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      margin-bottom: 2px;
+    }
+    .clink-val { font-size: 14px; font-weight: 600; color: var(--forest); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--forest);
+      padding: 28px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .foot-name {
+      font-family: 'Fraunces', serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--cream);
+      letter-spacing: -0.02em;
+    }
+    .foot-role {
+      font-size: 12px;
+      color: rgba(246,242,235,0.45);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1100px) {
+      nav { padding: 18px 36px; }
+      .hero { padding: 0 36px; }
+      section { padding: 80px 36px; }
+      .about-layout { grid-template-columns: 1fr; gap: 52px; }
+      .expertise-grid { grid-template-columns: 1fr 1fr; }
+      .work-body { grid-template-columns: 1fr; }
+      .xp { grid-template-columns: 1fr; gap: 10px; }
+      .creds-grid { grid-template-columns: 1fr; }
+      .contact-layout { grid-template-columns: 1fr; gap: 52px; }
+      footer { padding: 24px 36px; }
+    }
+    @media (max-width: 720px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 0 20px; }
+      section { padding: 60px 20px; }
+      .hero-name { font-size: clamp(52px, 15vw, 100px); }
+      .hero-meta { flex-direction: column; gap: 20px; }
+      .hero-bottom { flex-wrap: wrap; gap: 24px; }
+      .hero-ctas { margin-left: 0; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .work-header { padding: 24px 22px; }
+      .work-body { padding: 0 22px 32px; }
+      .xp { padding: 28px 22px; }
+      .creds-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 6px; text-align: center; padding: 20px; }
+    }
+  </style>
 </head>
 <body>
 
-<nav id="nav">
-  <div class="nav-brand">Darlene Bridgete</div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#history">Experience</a></li>
-    <li><a href="#cases">Case Studies</a></li>
-    <li><a href="#credentials">Credentials</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid-lines"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow reveal">
-      <div class="hero-rule-line"></div>
-      <span class="label label--dim">Operations &amp; Systems Professional</span>
+  <!-- ─── NAVIGATION ─── -->
+  <nav id="nav">
+    <a class="nav-brand" href="#top">Darlene Bridgete</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Contact</a>
     </div>
-    <h1 class="hero-name reveal d1">
-      Darlene<br><em>Bridgete</em>
-    </h1>
-    <div class="hero-bottom reveal d2">
-      <p class="hero-strapline">
-        I design the processes, coordinate the people, and build the systems that make organisations run without friction. Healthcare administration. Operations architecture. Digital platform delivery.
-      </p>
-      <div class="hero-actions">
-        <a href="mailto:amariayrin@gmail.com" class="btn btn-gold">Get in Touch</a>
-        <a href="https://linkedin.com/in/darlene-ayrin" target="_blank" class="btn btn-ghost">LinkedIn</a>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <div class="hsi-line"></div>
-    <span class="hsi-label">Scroll</span>
-  </div>
-</section>
+  </nav>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="inner">
-    <div class="sec-hd reveal"><h2 class="sec-title">About</h2></div>
-    <div class="about-grid">
-      <div>
-        <p class="label label--gold reveal">At a Glance</p>
-        <div class="stats-stack">
-          <div class="stat-row reveal d1">
-            <div class="stat-num">3+</div>
-            <div class="stat-lbl">Years of operational and administrative delivery</div>
+  <!-- ─── HERO ─── -->
+  <div id="top" class="hero">
+    <div class="hero-watermark">BSA</div>
+
+    <div class="hero-top">
+      <div class="hero-headline-wrap">
+        <div class="hero-eyebrow">
+          <div class="live-dot"></div>
+          <span class="eyebrow-txt">Open to Impact-Driven Roles &nbsp;|&nbsp; UK and Global</span>
+        </div>
+
+        <h1 class="hero-name">Darlene<br><em>Bridgete</em></h1>
+
+        <div class="hero-meta">
+          <div class="hero-title-block">
+            <div class="hero-role">Business Systems Analyst &amp; Digital Transformation Specialist</div>
+            <div class="hero-sub">I translate operational complexity into systems that actually work, across healthcare, technology, and the organisations that sit in between.</div>
           </div>
-          <div class="stat-row reveal d2">
-            <div class="stat-num">15+</div>
-            <div class="stat-lbl">Vendor and partner accounts managed simultaneously</div>
-          </div>
-          <div class="stat-row reveal d3">
-            <div class="stat-num">35%</div>
-            <div class="stat-lbl">Reduction in onboarding time through process redesign</div>
-          </div>
-          <div class="stat-row reveal d4">
-            <div class="stat-num">Zero</div>
-            <div class="stat-lbl">Compliance incidents across all client engagements</div>
+          <div class="hero-tags-block">
+            <span class="htag">Healthcare Informatics</span>
+            <span class="htag">AI Operations</span>
+            <span class="htag">SaaS Product Design</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <div>
-        <p class="about-intro reveal">
-          I see how a process <em>actually works,</em> not just how it is supposed to.
+    <div class="hero-bottom">
+      <div class="hb-item">
+        <span class="hb-label">Sector Focus</span>
+        <span class="hb-value">Digital Health &amp; Healthcare IT</span>
+      </div>
+      <div class="hb-div"></div>
+      <div class="hb-item">
+        <span class="hb-label">Experience</span>
+        <span class="hb-value">3+ Years, Multi-Sector</span>
+      </div>
+      <div class="hb-div"></div>
+      <div class="hb-item">
+        <span class="hb-label">Availability</span>
+        <span class="hb-value">Immediate</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-forest">Get in Touch</a>
+        <a href="#work" class="btn-outline">See Work</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── MARQUEE ─── -->
+  <div class="marquee-band">
+    <div class="mq-track">
+      <div class="mq-item"><div class="mq-dot"></div>Business Systems Analysis</div>
+      <div class="mq-item"><div class="mq-dot"></div>Digital Health Transformation</div>
+      <div class="mq-item"><div class="mq-dot"></div>Process Optimisation</div>
+      <div class="mq-item"><div class="mq-dot"></div>SaaS Product Design</div>
+      <div class="mq-item"><div class="mq-dot"></div>Healthcare Informatics</div>
+      <div class="mq-item"><div class="mq-dot"></div>AI Operations</div>
+      <div class="mq-item"><div class="mq-dot"></div>Requirements Analysis</div>
+      <div class="mq-item"><div class="mq-dot"></div>Stakeholder Management</div>
+      <div class="mq-item"><div class="mq-dot"></div>Change Management</div>
+      <div class="mq-item"><div class="mq-dot"></div>Digital Transformation</div>
+      <!-- dupe -->
+      <div class="mq-item"><div class="mq-dot"></div>Business Systems Analysis</div>
+      <div class="mq-item"><div class="mq-dot"></div>Digital Health Transformation</div>
+      <div class="mq-item"><div class="mq-dot"></div>Process Optimisation</div>
+      <div class="mq-item"><div class="mq-dot"></div>SaaS Product Design</div>
+      <div class="mq-item"><div class="mq-dot"></div>Healthcare Informatics</div>
+      <div class="mq-item"><div class="mq-dot"></div>AI Operations</div>
+      <div class="mq-item"><div class="mq-dot"></div>Requirements Analysis</div>
+      <div class="mq-item"><div class="mq-dot"></div>Stakeholder Management</div>
+      <div class="mq-item"><div class="mq-dot"></div>Change Management</div>
+      <div class="mq-item"><div class="mq-dot"></div>Digital Transformation</div>
+    </div>
+  </div>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about">
+    <div class="sec-hdr rv">
+      <span class="sn">01</span>
+      <h2 class="st">About</h2>
+      <div class="sr"></div>
+    </div>
+    <div class="about-layout">
+      <div class="rv">
+        <p class="about-pull">
+          I build the kind of clarity that makes organisations<br><em>actually move forward.</em>
         </p>
-        <p class="about-p reveal d1">
-          Over three years I have built and managed operational systems across healthcare administration, digital platform delivery, and strategic consultancy. My work sits at the intersection of people coordination, process design, and performance management: I understand the ground-level detail and the architecture above it simultaneously.
-        </p>
-        <p class="about-p reveal d2">
-          As Operations Director of Syncraft Labs, I directed three concurrent service lines, designed governance frameworks and SOP libraries from scratch, managed over 15 vendor relationships with structured performance tracking, and led a formal operational restructure that consolidated five competing workstreams into three sequenced, better-resourced functions. As Platform Operations Lead for Zuqora, I managed a live SaaS platform through full market transition, redesigning payment infrastructure, GDPR compliance procedures, and onboarding workflows to meet a new regulatory environment.
-        </p>
-        <p class="about-p reveal d3">
-          My healthcare administration background covers clinical workflow coordination, patient scheduling, health records management, and clinical correspondence across NHS-adjacent and private care settings. I apply data protection principles as standard practice, not a checklist item.
-        </p>
-        <div class="tag-cloud reveal d4">
-          <span class="tag">Operations Management</span>
-          <span class="tag">Healthcare Administration</span>
-          <span class="tag">Service Delivery</span>
-          <span class="tag">Workflow Design</span>
-          <span class="tag">Process Improvement</span>
-          <span class="tag">GDPR Compliance</span>
-          <span class="tag">Stakeholder Management</span>
-          <span class="tag">SOP Development</span>
-          <span class="tag">Performance Reporting</span>
-          <span class="tag">Platform Operations</span>
+        <div class="about-body">
+          <p>I am a Business Systems Analyst and Digital Operations Specialist with a background spanning <strong>healthcare systems, SaaS product design, and organisational transformation</strong>. My work sits at the boundary between what systems do and what organisations need them to do, and I am at my best when that gap is widest.</p>
+          <p>I translate complex business requirements into functional specifications, map current-state processes against future-state ambitions, and manage change in environments where the stakes are real. I bring both analytical rigour and operational depth, having led projects from initial stakeholder needs analysis through to delivery and documentation.</p>
+          <p>My sector depth is in healthcare information systems and digital health, with additional experience across SaaS product design and enterprise operations consulting. I work comfortably across technical, clinical, and executive stakeholder groups, and I have spent the past three years doing exactly that.</p>
+          <p>I am currently available for senior analyst, digital transformation, and product-aligned roles where technical intelligence and operational leadership make a measurable difference.</p>
+        </div>
+      </div>
+      <div class="about-right rv">
+        <div class="stat-stack">
+          <div class="stat-row">
+            <div class="stat-n">3<span>+</span></div>
+            <div class="stat-l">Years Cross-Sector Experience</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-n">2</div>
+            <div class="stat-l">SaaS Platforms Specified End-to-End</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-n">5<span>+</span></div>
+            <div class="stat-l">Organisations Consulted</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-n">30<span>+</span></div>
+            <div class="stat-l">Product Features Scoped to Full PRD</div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-n">3</div>
+            <div class="stat-l">Active Ventures Under Management</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EXPERTISE -->
-<section id="expertise">
-  <div class="inner">
-    <div class="sec-hd reveal"><h2 class="sec-title">Expertise</h2></div>
-    <div class="expertise-grid">
-
-      <div class="exp-card reveal">
-        <div class="exp-icon">&#9881;</div>
-        <div class="exp-card-title">Operational Systems Design</div>
-        <p class="exp-card-desc">Building the process architecture that enables organisations to deliver consistently, day to day, without requiring constant management intervention.</p>
-        <ul class="exp-items">
-          <li>Operational audit and gap analysis</li>
-          <li>SOP and governance framework development</li>
-          <li>Workflow mapping and redesign</li>
-          <li>Performance reporting and KPI structures</li>
-          <li>Cross-departmental coordination design</li>
-        </ul>
-      </div>
-
-      <div class="exp-card reveal d1">
-        <div class="exp-icon">&#8853;</div>
-        <div class="exp-card-title">Healthcare and Clinical Administration</div>
-        <p class="exp-card-desc">Patient and clinical administration delivered to NHS-standard compliance, with a strong record in records management, scheduling, and GDPR-aligned data handling.</p>
-        <ul class="exp-items">
-          <li>Patient scheduling and appointment coordination</li>
-          <li>Health records management and retrieval</li>
-          <li>Clinical correspondence and documentation</li>
-          <li>Multi-disciplinary team administrative support</li>
-          <li>Data compliance and information governance</li>
-        </ul>
-      </div>
-
-      <div class="exp-card reveal d2">
-        <div class="exp-icon">&#9672;</div>
-        <div class="exp-card-title">Digital Platform and Operations</div>
-        <p class="exp-card-desc">Managing and improving the operational layer of digital services, from onboarding design and vendor management through to market transition and regulatory alignment.</p>
-        <ul class="exp-items">
-          <li>SaaS platform operations management</li>
-          <li>Vendor onboarding and account management</li>
-          <li>Market transition and operational redesign</li>
-          <li>Digital tool implementation and training</li>
-          <li>UK GDPR alignment and compliance review</li>
-        </ul>
-      </div>
-
+  <!-- ─── EXPERTISE ─── -->
+  <section id="expertise">
+    <div class="sec-hdr rv">
+      <span class="sn">02</span>
+      <h2 class="st">Core Expertise</h2>
+      <div class="sr"></div>
     </div>
-  </div>
-</section>
-
-<!-- WORK HISTORY -->
-<section id="history">
-  <div class="inner">
-    <div class="sec-hd sec-hd--light reveal"><h2 class="sec-title sec-title--light">Experience</h2></div>
-    <div class="hist-list">
-
-      <div class="hist-item reveal">
-        <div>
-          <div class="hist-period">2022 &ndash; Present</div>
-          <div class="hist-org">Syncraft Labs<br><br>Remote Delivery</div>
-        </div>
-        <div>
-          <div class="hist-role">Operations Director and Founder</div>
-          <ul class="hist-buls">
-            <li>Directed administrative and operational delivery across three concurrent service lines, maintaining quality standards, governance structures, and delivery timelines across all areas simultaneously.</li>
-            <li>Designed the operational architecture for each business unit from the ground up, producing process maps, SOP libraries, escalation frameworks, and performance reporting structures that enabled consistent delivery without direct management at every stage.</li>
-            <li>Conducted a formal operational audit, producing a gap analysis and restructuring roadmap that consolidated five competing workstreams into three sequenced, better-resourced functions, reducing administrative delays by an estimated 30 per cent.</li>
-            <li>Managed over 15 vendor and partner relationships with structured performance tracking, issue logs, and escalation procedures maintained on a weekly cadence.</li>
-            <li>Coordinated cross-functional delivery across technical, commercial, and operational teams, producing monthly governance reports and progress summaries for senior review.</li>
-          </ul>
-        </div>
+    <div class="expertise-grid rv">
+      <div class="exp-card">
+        <span class="ec-icon">◈</span>
+        <div class="ec-name">Business Requirements Analysis</div>
+        <div class="ec-desc">Eliciting, structuring, and prioritising requirements across complex stakeholder landscapes. Translating ambiguous business needs into precise, actionable functional specifications.</div>
       </div>
-
-      <div class="hist-item reveal d1">
-        <div>
-          <div class="hist-period">2023 &ndash; Present</div>
-          <div class="hist-org">Zuqora<br>Syncraft Labs<br></div>
-        </div>
-        <div>
-          <div class="hist-role">Platform Operations Lead</div>
-          <ul class="hist-buls">
-            <li>Managed end-to-end operations of a live vendor management SaaS platform from pre-launch through deployment and ongoing iteration, accountable for service quality, onboarding consistency, and operational reporting.</li>
-            <li>Defined and documented all service delivery workflows and onboarding procedures in a structured SOP library, ensuring operational consistency regardless of personnel involvement.</li>
-            <li>Led the complete operational transition of the platform to a new market, redesigning payment infrastructure, GDPR compliance procedures, and onboarding processes to meet UK regulatory requirements, with zero service downtime.</li>
-            <li>Analysed operational data and user feedback iteratively, achieving a 35 per cent reduction in average onboarding time across two successive delivery cycles.</li>
-          </ul>
-        </div>
+      <div class="exp-card">
+        <span class="ec-icon">⬡</span>
+        <div class="ec-name">Process Mapping and Optimisation</div>
+        <div class="ec-desc">Current-state and future-state process analysis using structured frameworks. Identifying failure points, designing improved workflows, and managing end-to-end implementation.</div>
       </div>
-
-      <div class="hist-item reveal d2">
-        <div>
-          <div class="hist-period">2022 &ndash; Present</div>
-          <div class="hist-org">Self-Employed<br>Remote</div>
-        </div>
-        <div>
-          <div class="hist-role">Healthcare Administration and Operations Consultant</div>
-          <ul class="hist-buls">
-            <li>Delivered healthcare administration and operations support to clients across health, NGO, and technology sectors, managing patient scheduling, records coordination, and clinical correspondence to a consistent professional standard.</li>
-            <li>Designed and implemented digital records and scheduling systems for client organisations, improving retrieval efficiency by an estimated 40 per cent and eliminating recurring documentation errors.</li>
-            <li>Produced SOP libraries, process maps, and operational guides enabling client teams to onboard new staff and maintain service consistency without ongoing external dependency.</li>
-            <li>Applied GDPR-consistent data protection principles across all client engagements, maintaining zero compliance incidents across three-plus years of delivery.</li>
-          </ul>
-        </div>
+      <div class="exp-card">
+        <span class="ec-icon">◎</span>
+        <div class="ec-name">Healthcare Systems and Informatics</div>
+        <div class="ec-desc">Deep familiarity with clinical administrative workflows, health information system requirements, and the operational dynamics of healthcare environments, from multi-site clinics to digital health platforms.</div>
       </div>
-
+      <div class="exp-card">
+        <span class="ec-icon">▣</span>
+        <div class="ec-name">SaaS Product Specification</div>
+        <div class="ec-desc">Full-cycle product requirements documentation: PRD development, user story writing, acceptance criteria definition, and technical architecture specification across multiple platform types.</div>
+      </div>
+      <div class="exp-card">
+        <span class="ec-icon">◉</span>
+        <div class="ec-name">AI Operations and Integration</div>
+        <div class="ec-desc">Translating AI capability into operational reality, including workflow integration design, change management frameworks, and governance structures for AI-enabled organisational environments.</div>
+      </div>
+      <div class="exp-card">
+        <span class="ec-icon">◆</span>
+        <div class="ec-name">Stakeholder Management</div>
+        <div class="ec-desc">Facilitating alignment across technical, clinical, and executive stakeholders. Bridging the communication gap between IT functions and the business at every organisational level.</div>
+      </div>
+      <div class="exp-card">
+        <span class="ec-icon">⬛</span>
+        <div class="ec-name">Project Management and Delivery</div>
+        <div class="ec-desc">End-to-end project lifecycle management with experience in structured delivery frameworks and Agile methodologies across operational and digital transformation programmes.</div>
+      </div>
+      <div class="exp-card">
+        <span class="ec-icon">◐</span>
+        <div class="ec-name">Data Governance and Compliance</div>
+        <div class="ec-desc">Awareness of information governance frameworks, data protection principles, and compliance requirements within healthcare and regulated digital environments, including ICO standards.</div>
+      </div>
+      <div class="exp-card">
+        <span class="ec-icon">◑</span>
+        <div class="ec-name">Change Management and Adoption</div>
+        <div class="ec-desc">Designing and supporting change programmes that secure genuine stakeholder buy-in, reduce resistance, and embed new systems and working practices sustainably within organisations.</div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CASE STUDIES -->
-<section id="cases">
-  <div class="inner">
-    <div class="sec-hd reveal"><h2 class="sec-title">Case Studies</h2></div>
-    <div class="cases-grid">
+  <!-- ─── WORK ─── -->
+  <section id="work">
+    <div class="sec-hdr rv">
+      <span class="sn">03</span>
+      <h2 class="st">Selected Work</h2>
+      <div class="sr"></div>
+    </div>
+    <div class="work-list rv">
 
-      <div class="case-card case-card--wide reveal">
-        <div class="case-accent ca-navy"></div>
-        <div class="case-body">
-          <div class="case-tag">Operational Restructure</div>
-          <div class="case-title">From five competing priorities to three sequenced functions</div>
-          <p class="case-desc">Syncraft Labs was operating five simultaneous workstreams without a unified governance structure, clear priority hierarchy, or shared reporting framework. Resources were fragmented, delivery was inconsistent, and decision-making was reactive rather than planned. As Operations Director, I conducted a formal audit: mapping existing workflows, identifying structural bottlenecks, interviewing stakeholders across each function, and producing a gap analysis with a redesign roadmap.</p>
-          <p class="case-desc">The restructure consolidated the organisation into three clearly sequenced, better-resourced service lines. Each unit received its own SOP library, a governance reporting cycle, and a set of performance indicators monitored monthly. Implementation took six weeks. Administrative delays reduced by an estimated 30 per cent within two months of the new structure going live.</p>
-          <div class="case-outcomes">
-            <div><div class="outcome-num">5 &#8594; 3</div><div class="outcome-lbl">Workstreams restructured</div></div>
-            <div><div class="outcome-num">30%</div><div class="outcome-lbl">Reduction in admin delays</div></div>
-            <div><div class="outcome-num">6 wks</div><div class="outcome-lbl">Implementation timeline</div></div>
-            <div><div class="outcome-num">3</div><div class="outcome-lbl">SOP libraries produced</div></div>
+      <!-- CASE 1 -->
+      <div class="work-item">
+        <div class="work-header" onclick="toggleWork(this)">
+          <div class="work-left">
+            <div class="work-num">01</div>
+            <div class="work-titles">
+              <div class="work-tag">SaaS Product Design</div>
+              <div class="work-title">Zuqora &mdash; Vendor Operations Platform</div>
+            </div>
+          </div>
+          <span class="work-period">2024 to Present</span>
+          <span class="work-arrow">&#8250;</span>
+        </div>
+        <div class="work-body">
+          <div>
+            <div class="work-section-label">The Problem</div>
+            <p class="work-problem">Informal and semi-formal retail vendors were operating without any unified system for inventory tracking, sales recording, debt management, or financial visibility, resulting in revenue leakage, stock inefficiency, and no pathway to formal credit access.</p>
+            <div class="work-section-label">The Approach</div>
+            <p class="work-approach">Led end-to-end business analysis and product specification from zero. Conducted stakeholder needs analysis across vendor segments, defined system requirements across four user tiers, and produced a full PRD covering the core operations module, marketplace listing engine, integrated payment processing, debt reminder automation, and expiry management. Designed the pricing architecture across a Free-to-Pro tier model, produced the GTM strategy and brand system, then led a full market repositioning exercise targeting UK corridors with revised pricing and updated channel strategy.</p>
+          </div>
+          <div>
+            <div class="work-section-label">Key Outputs</div>
+            <div class="outcomes-list">
+              <div class="oc"><span class="oc-n">01</span>Full PRD with database migration specifications and API route documentation</div>
+              <div class="oc"><span class="oc-n">02</span>Four-tier SaaS pricing architecture built around segment value drivers</div>
+              <div class="oc"><span class="oc-n">03</span>GTM strategy designed and repositioned across two distinct markets</div>
+              <div class="oc"><span class="oc-n">04</span>100-item launch readiness checklist produced and tracked</div>
+              <div class="oc"><span class="oc-n">05</span>UK ICO registration and compliance pathway mapped</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="case-card reveal d1">
-        <div class="case-accent ca-teal"></div>
-        <div class="case-body">
-          <div class="case-tag">Platform Operations and Market Transition</div>
-          <div class="case-title">Full operational redesign for a new regulatory environment</div>
-          <p class="case-desc">Zuqora required a complete operational transition to a UK regulatory environment. This involved redesigning payment flows, reviewing all data handling procedures against UK GDPR, rebuilding the vendor onboarding workflow from scratch, and rewriting the full SOP library for the new market context. The transition was managed without operational downtime, maintaining service continuity for existing users throughout. Onboarding time reduced by 35 per cent within two delivery cycles of the new process.</p>
-          <div class="case-outcomes">
-            <div><div class="outcome-num">35%</div><div class="outcome-lbl">Onboarding time reduced</div></div>
-            <div><div class="outcome-num">Zero</div><div class="outcome-lbl">Downtime incidents</div></div>
-            <div><div class="outcome-num">Full</div><div class="outcome-lbl">UK GDPR alignment</div></div>
+      <!-- CASE 2 -->
+      <div class="work-item">
+        <div class="work-header" onclick="toggleWork(this)">
+          <div class="work-left">
+            <div class="work-num">02</div>
+            <div class="work-titles">
+              <div class="work-tag">Healthcare Operations Consulting</div>
+              <div class="work-title">Healthcare Administrative Systems Transformation</div>
+            </div>
+          </div>
+          <span class="work-period">2023 to Present</span>
+          <span class="work-arrow">&#8250;</span>
+        </div>
+        <div class="work-body">
+          <div>
+            <div class="work-section-label">The Problem</div>
+            <p class="work-problem">Clinic and health service clients were operating with fragmented administrative processes, unclear patient data workflows, and no coherent systems strategy, creating compliance exposure, revenue leakage, and friction for both staff and patients.</p>
+            <div class="work-section-label">The Approach</div>
+            <p class="work-approach">Delivered operational assessments and systems consulting across multiple clinic engagements. Mapped current-state administrative workflows, identified process failure points, and produced structured systems improvement recommendations with implementation guidance. Advised on insurance and claims coordination process design, developed remote delivery frameworks for ongoing administrative systems support, and framed all engagements around measurable outcomes: revenue protection, compliance assurance, and operational efficiency.</p>
+          </div>
+          <div>
+            <div class="work-section-label">Key Outputs</div>
+            <div class="outcomes-list">
+              <div class="oc"><span class="oc-n">01</span>Administrative workflow maps and gap analysis reports delivered across engagements</div>
+              <div class="oc"><span class="oc-n">02</span>Insurance claims coordination processes redesigned and documented</div>
+              <div class="oc"><span class="oc-n">03</span>Remote operational support frameworks established for ongoing client delivery</div>
+              <div class="oc"><span class="oc-n">04</span>Systems improvement recommendations delivered across five-plus client organisations</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="case-card reveal d2">
-        <div class="case-accent ca-gold"></div>
-        <div class="case-body">
-          <div class="case-tag">Healthcare Administration Systems</div>
-          <div class="case-title">Zero scheduling errors through structured digital process design</div>
-          <p class="case-desc">A community health organisation was managing appointment scheduling through informal messaging and an unstructured spreadsheet, resulting in double-bookings and patient communication failures. I designed a structured digital scheduling system, a supporting records protocol, staff training documentation, and a handover procedure. Scheduling errors reduced to zero within six weeks of implementation. The system has operated without structural modification since delivery.</p>
-          <div class="case-outcomes">
-            <div><div class="outcome-num">Zero</div><div class="outcome-lbl">Scheduling errors post-implementation</div></div>
-            <div><div class="outcome-num">40%</div><div class="outcome-lbl">Records retrieval improvement</div></div>
+      <!-- CASE 3 -->
+      <div class="work-item">
+        <div class="work-header" onclick="toggleWork(this)">
+          <div class="work-left">
+            <div class="work-num">03</div>
+            <div class="work-titles">
+              <div class="work-tag">Venture Architecture &amp; Operations Design</div>
+              <div class="work-title">Syncraft Labs &mdash; Multi-Venture Operational Architecture</div>
+            </div>
+          </div>
+          <span class="work-period">2022 to Present</span>
+          <span class="work-arrow">&#8250;</span>
+        </div>
+        <div class="work-body">
+          <div>
+            <div class="work-section-label">The Problem</div>
+            <p class="work-problem">A growing portfolio of technology and consulting ventures lacked a unified operational architecture, resulting in resource fragmentation, unclear delivery accountability, and no coherent multi-jurisdictional entity or compliance strategy.</p>
+            <div class="work-section-label">The Approach</div>
+            <p class="work-approach">Designed and implemented the complete operational architecture for Syncraft Labs and its venture portfolio, covering governance structures, delivery frameworks, client engagement processes, and entity planning across multiple jurisdictions. Established project management processes, stakeholder reporting cadences, and systems documentation standards across all active ventures. Managed concurrent delivery across product development, consulting, and GTM workstreams, applying consistent BA and PM methodology throughout.</p>
+          </div>
+          <div>
+            <div class="work-section-label">Key Outputs</div>
+            <div class="outcomes-list">
+              <div class="oc"><span class="oc-n">01</span>Full operational architecture designed across a three-entity venture structure</div>
+              <div class="oc"><span class="oc-n">02</span>Project delivery frameworks and documentation standards established</div>
+              <div class="oc"><span class="oc-n">03</span>Multi-jurisdictional entity and compliance planning completed</div>
+              <div class="oc"><span class="oc-n">04</span>Concurrent programme management across product, consulting, and GTM workstreams</div>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CREDENTIALS -->
-<section id="credentials">
-  <div class="inner">
-    <div class="sec-hd reveal"><h2 class="sec-title">Credentials</h2></div>
-    <div class="creds-grid">
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience">
+    <div class="sec-hdr rv">
+      <span class="sn">04</span>
+      <h2 class="st">Experience</h2>
+      <div class="sr"></div>
+    </div>
+    <div class="xp-list">
 
+      <div class="xp rv">
+        <div class="xp-date">
+          <strong>2022 to Present</strong>
+          Full-time
+        </div>
+        <div>
+          <div class="xp-org">Syncraft Labs</div>
+          <div class="xp-role">Co-Founder and Operations Lead</div>
+          <p class="xp-body">Co-founded and lead operations at Syncraft Labs, a technology and systems consultancy delivering operational transformation, product design, and digital strategy across Africa and international markets. Accountable for the full scope of operational architecture: business development, client delivery, product strategy, and venture portfolio oversight.</p>
+          <p class="xp-body">Responsibilities span requirements analysis, stakeholder management, process design, product specification, project delivery, and operational systems consulting across healthcare, SaaS, and enterprise contexts. Actively manages two product ventures at varying stages of development and oversees multi-jurisdictional entity planning.</p>
+          <div class="tags">
+            <span class="tag">Business Analysis</span>
+            <span class="tag">Product Strategy</span>
+            <span class="tag">Operations Management</span>
+            <span class="tag">Stakeholder Management</span>
+            <span class="tag">Project Delivery</span>
+            <span class="tag">Digital Transformation</span>
+            <span class="tag">Systems Architecture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="xp rv">
+        <div class="xp-date">
+          <strong>2023 to Present</strong>
+          Freelance
+        </div>
+        <div>
+          <div class="xp-org">Independent Consultancy</div>
+          <div class="xp-role">Healthcare Operations and Administrative Systems Consultant</div>
+          <p class="xp-body">Provides operational assessments, process improvement consulting, and administrative systems advisory services to clinic and health service clients. Specialises in workflow analysis, healthcare information systems requirements, and insurance claims process design. Engagements are delivered remotely and on-site, with a structured methodology for translating complex clinical operations into practical systems recommendations.</p>
+          <p class="xp-body">Client engagements have included multi-site clinic groups, encompassing revenue cycle analysis, administrative workflow redesign, staff-facing systems guidance, and remote operational coordination frameworks.</p>
+          <div class="tags">
+            <span class="tag">Healthcare Informatics</span>
+            <span class="tag">Process Analysis</span>
+            <span class="tag">Workflow Design</span>
+            <span class="tag">Remote Delivery</span>
+            <span class="tag">Clinical Admin Systems</span>
+            <span class="tag">Revenue Cycle</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── CREDENTIALS ─── -->
+  <section id="credentials">
+    <div class="sec-hdr rv">
+      <span class="sn">05</span>
+      <h2 class="st">Education and Credentials</h2>
+      <div class="sr"></div>
+    </div>
+    <div class="creds-grid rv">
+      <div class="cred">
+        <div class="cred-ic">🎓</div>
+        <div>
+          <div class="cred-tp">Undergraduate Degree</div>
+          <div class="cred-nm">Bachelor of Business Information Technology</div>
+          <div class="cred-is">Multimedia University of Kenya &middot; 2026</div>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-ic">📋</div>
+        <div>
+          <div class="cred-tp">Professional Certificate</div>
+          <div class="cred-nm">Google Project Management Certificate</div>
+          <div class="cred-is">Google via Coursera &middot; 2024</div>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-ic">🔐</div>
+        <div>
+          <div class="cred-tp">Professional Development</div>
+          <div class="cred-nm">Introduction to Information Security (CISSP Foundations)</div>
+          <div class="cred-is">Simplilearn &middot; 2024</div>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-ic">⚙️</div>
+        <div>
+          <div class="cred-tp">In Progress</div>
+          <div class="cred-nm">PRINCE2 Foundation &mdash; Project Management</div>
+          <div class="cred-is">PeopleCert &middot; 2026/27</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="sec-hdr rv">
+      <span class="sn">06</span>
+      <h2 class="st">Get in Touch</h2>
+      <div class="sr"></div>
+    </div>
+    <div class="contact-layout rv">
       <div>
-        <div class="creds-col-title reveal">Education and Qualifications</div>
-
-        <div class="cred-row reveal d1">
-          <div>
-            <div class="cred-title">Bachelor of Business Information Technology</div>
-            <div class="cred-sub">Multimedia University of Kenya</div>
-            <div class="cred-note-text">Operations Management &middot; Business Systems Analysis &middot; Project Management &middot; Database Management &middot; Business Communication</div>
-          </div>
-          <div class="cred-yr">2026</div>
-        </div>
-
-        <div class="cred-row reveal d2">
-          <div>
-            <div class="cred-title">Google Project Management Certificate</div>
-            <div class="cred-sub">Google via Coursera</div>
-          </div>
-          <div class="cred-yr">2024</div>
-        </div>
-
-        <div class="cred-row reveal d3">
-          <div>
-            <div class="cred-title">Introduction to CISSP</div>
-            <div class="cred-sub">Simplilearn</div>
-            <div class="cred-note-text">Awareness-level training in information governance, data risk, and security compliance frameworks</div>
-          </div>
-          <div class="cred-yr">2024</div>
-        </div>
-
-        <div class="cred-row reveal d3">
-          <div>
-            <div class="cred-title">Clinical and Medical Administration</div>
-            <div class="cred-sub">Alison</div>
-          </div>
-          <div class="cred-yr">2023 &amp; 2026</div>
-        </div>
-
-        <div class="cred-row reveal d4">
-          <div>
-            <div class="cred-title">Healthcare Management Fundamentals</div>
-            <div class="cred-sub">Alison</div>
-          </div>
-          <div class="cred-yr">2023 &amp; 2026</div>
-        </div>
-
-        <div class="cred-row reveal d5">
-         
-        </div>
-
-        <div style="margin-top:40px" class="reveal">
-          <div class="creds-col-title" style="font-size:17px;margin-bottom:16px;padding-bottom:12px">Languages</div>
-          <div class="lang-row"><span class="lang-name">English</span><span class="lang-lvl">Native fluency</span></div>
-          <div class="lang-row"><span class="lang-name">German</span><span class="lang-lvl">Fluent</span></div>
-        </div>
+        <p class="contact-pull">
+          Serious about working where <em>systems thinking</em> and operational precision genuinely matter.
+        </p>
+        <p class="contact-body">
+          I bring a strong professional foundation and a clear domain focus. I am selective about where I direct my energy, and interested in roles and organisations where analytical depth translates into real organisational change. If that sounds like where you are, I am glad to connect.
+        </p>
       </div>
-
-      <div>
-        <div class="creds-col-title reveal">Core Skills</div>
-        <div class="skills-wrap reveal d1">
-          <span class="sk">Operations Management</span>
-          <span class="sk">Service Delivery</span>
-          <span class="sk">Healthcare Administration</span>
-          <span class="sk">Patient Administration</span>
-          <span class="sk">Health Records Management</span>
-          <span class="sk">Clinical Administration</span>
-          <span class="sk">GDPR and Data Compliance</span>
-          <span class="sk">Information Governance</span>
-          <span class="sk">Workflow Design</span>
-          <span class="sk">Process Improvement</span>
-          <span class="sk">SOP Development</span>
-          <span class="sk">Operational Audit</span>
-          <span class="sk">Stakeholder Management</span>
-          <span class="sk">Performance Reporting</span>
-          <span class="sk">Cross-Functional Coordination</span>
-          <span class="sk">Vendor Management</span>
-          <span class="sk">Platform Operations</span>
-          <span class="sk">Change Management</span>
-          <span class="sk">Project Coordination</span>
-          <span class="sk">Resource Coordination</span>
-          <span class="sk">Risk Identification</span>
-          <span class="sk">Report Writing</span>
-          <span class="sk">Minute Taking</span>
-          <span class="sk">Microsoft 365</span>
-          <span class="sk">Google Workspace</span>
-          <span class="sk">Airtable</span>
-          <span class="sk">Notion</span>
-          <span class="sk">Trello</span>
-          <span class="sk">Supabase</span>
-          <span class="sk">CRM Administration</span>
-          <span class="sk">Basic SQL</span>
-          <span class="sk">Process Mapping</span>
-          <span class="sk">Agile Coordination</span>
-          <span class="sk">Digital Transformation</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div>
-      <p class="label label--dim" style="margin-bottom:18px">Availability</p>
-      <h2 class="contact-heading reveal">
-        Open to the right<br><em>work, anywhere.</em>
-      </h2>
-      <p class="contact-body reveal d1">
-        I work with organisations that take their operations seriously. Whether that is a structured NHS environment, a scaling healthcare group, an international NGO, or a private organisation that needs its systems built properly, the work is the same: understand the environment, design what it needs, and deliver it without noise.
-      </p>
-      <div class="avail-chips reveal d2">
-        <div class="chip"><div class="chip-dot"></div> UK and Ireland</div>
-        <div class="chip"><div class="chip-dot"></div> EU and Europe</div>
-        <div class="chip"><div class="chip-dot"></div> Remote, Global</div>
-        <div class="chip"><div class="chip-dot"></div> Immediate Availability</div>
+      <div class="contact-links">
+        <a href="mailto:amariayrin@gmail.com" class="clink">
+          <div class="clink-ic">&#9993;</div>
+          <div>
+            <div class="clink-lbl">Email</div>
+            <div class="clink-val">Reach out via Email</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/darlene-ayrin/" target="_blank" rel="noopener noreferrer" class="clink">
+          <div class="clink-ic">in</div>
+          <div>
+            <div class="clink-lbl">LinkedIn</div>
+            <div class="clink-val">View my LinkedIn Profile</div>
+          </div>
+        </a>
       </div>
     </div>
+  </section>
 
-    <div class="contact-ctas reveal d3">
-      <a href="mailto:amariayrin@gmail.com" class="btn btn-gold" style="justify-content:center">Send a Message</a>
-      <a href="https://linkedin.com/in/darlene-ayrin" target="_blank" class="btn btn-ghost" style="justify-content:center">LinkedIn Profile</a>
-      <div class="contact-link">amariayrin@gmail.com</div>
-    </div>
-  </div>
-</section>
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="foot-name">Darlene Bridgete</div>
+    <div class="foot-role">Business Systems Analyst &nbsp;&middot;&nbsp; Digital Health &amp; Operational Intelligence &nbsp;&middot;&nbsp; Global</div>
+  </footer>
 
-<footer>
-  <div class="footer-mark">Darlene Bridgete</div>
-  <div class="footer-note">Operations &nbsp;&middot;&nbsp; UK &nbsp;&middot;&nbsp; EU &nbsp;&middot;&nbsp; Global</div>
-</footer>
+  <!-- ─── SCRIPTS ─── -->
+  <script>
+    // Navbar scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
 
-<script>
-// Scroll reveal
-const els = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
-els.forEach(el => io.observe(el));
+    // Scroll reveal
+    const revEls = document.querySelectorAll('.rv');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
+    revEls.forEach(el => io.observe(el));
 
-// Nav scroll
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 56), { passive: true });
+    // Stagger grid children
+    document.querySelectorAll('.expertise-grid, .creds-grid, .xp-list').forEach(p => {
+      Array.from(p.children).forEach((c, i) => {
+        c.style.transitionDelay = `${i * 60}ms`;
+      });
+    });
 
-// Hero loads instantly
-document.querySelectorAll('#hero .reveal').forEach((el, i) => {
-  setTimeout(() => el.classList.add('vis'), 150 + i * 110);
-});
-</script>
+    // Accordion toggle
+    function toggleWork(header) {
+      const item = header.closest('.work-item');
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.work-item.open').forEach(el => el.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
 </body>
 </html>
